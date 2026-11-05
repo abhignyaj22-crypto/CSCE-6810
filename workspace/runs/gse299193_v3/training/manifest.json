@@ -1,0 +1,72 @@
+{
+  "component": "training",
+  "hash": "5a5768410d39999a",
+  "config": {
+    "n_folds": 7,
+    "seeds": [
+      7,
+      8,
+      9
+    ],
+    "model_variants": [
+      "full",
+      "no_neighbours",
+      "no_grid",
+      "no_program_tokens",
+      "no_comp",
+      "no_smooth",
+      "align",
+      "shuffled",
+      "oracle",
+      "anchor_only_targets"
+    ],
+    "batch_cells": 4096,
+    "max_epochs": 40,
+    "patience": 6,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "warmup_steps": 100,
+    "amp_enabled": true,
+    "amp_dtype": "bfloat16",
+    "tf32": true,
+    "compile_model": true,
+    "compile_mode": "default",
+    "cuda_graphs": false,
+    "grad_clip": 1.0,
+    "lambda_comp": 0.5,
+    "lambda_smooth": 0.1,
+    "lambda_align": 0.0,
+    "lambda_align_on": 0.1,
+    "uncertainty": "gaussian",
+    "nll_beta": 0.5,
+    "temperature_scaling": true,
+    "hidden": 256,
+    "dropout": 0.3,
+    "knn_k": 6,
+    "pca_dim": 128,
+    "use_morpho": true,
+    "selection_enabled": true,
+    "seed": 7
+  },
+  "upstream": {
+    "unified_model": "69cf861fcad61d5d",
+    "feature_selection": "7c7b74e22e94d1c7"
+  },
+  "artefacts": [
+    "folds.json",
+    "cv_preds_full.npy",
+    "cv_unc_full.npy",
+    "final_model.pt",
+    "hardware.json",
+    "cv_fold_log.csv"
+  ],
+  "git_commit": "unknown",
+  "device": "cuda",
+  "python": "3.12.3",
+  "seconds": 28138.1,
+  "seconds_compute": 28138.1,
+  "seconds_load": null,
+  "recomputed": true,
+  "computed_at": "2026-11-05 08:41:28",
+  "finished": "2026-11-05 08:41:28"
+}

@@ -1,0 +1,44 @@
+{
+  "component": "external_validation",
+  "hash": "fc55f171bda47556",
+  "config": {
+    "validation_n_random_sets": 50,
+    "validation_perturbations": [
+      "gamma_0.8",
+      "rot90"
+    ],
+    "validation_cohort_manifest": null,
+    "codex_table": null,
+    "codex_dapi": null,
+    "codex_um_per_px": null,
+    "codex_dapi_um_per_px": null,
+    "nb_radius_um": 30.0,
+    "knn_k": 6,
+    "encoder": "tiny_test",
+    "patch_px": 64,
+    "img_level": 1,
+    "z_project": "max",
+    "stain_mode": "native",
+    "target_spaces": [
+      "cell",
+      "nb"
+    ],
+    "target_norm": "cohort",
+    "seed": 7
+  },
+  "upstream": {
+    "training": "a2d81df580151581"
+  },
+  "artefacts": [
+    "validation_summary.json"
+  ],
+  "git_commit": "unknown",
+  "device": "cpu",
+  "python": "3.12.3",
+  "seconds": 9.7,
+  "seconds_compute": 9.7,
+  "seconds_load": null,
+  "recomputed": true,
+  "computed_at": "2026-11-04 22:29:56",
+  "finished": "2026-11-04 22:29:56"
+}

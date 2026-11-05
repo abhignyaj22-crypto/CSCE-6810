@@ -1,0 +1,78 @@
+{
+  "run_name": "gse299193_v3",
+  "minutes": 611.92,
+  "components": {
+    "ingest": {
+      "hash": "0806c866da27763f",
+      "seconds": 1.5,
+      "seconds_compute": 1501.5,
+      "recomputed": false
+    },
+    "preprocess": {
+      "hash": "f515739eeb278869",
+      "seconds": 1.8,
+      "seconds_compute": 1523.4,
+      "recomputed": false
+    },
+    "program_inference": {
+      "hash": "f451b3b94c1ce74e",
+      "seconds": 0.6,
+      "seconds_compute": 277.2,
+      "recomputed": false
+    },
+    "feature_extraction": {
+      "hash": "f1ab959dd91cf9df",
+      "seconds": 6.7,
+      "seconds_compute": 499.5,
+      "recomputed": false
+    },
+    "feature_selection": {
+      "hash": "7c7b74e22e94d1c7",
+      "seconds": 0.0,
+      "seconds_compute": 11.1,
+      "recomputed": false
+    },
+    "unified_model": {
+      "hash": "69cf861fcad61d5d",
+      "seconds": 0.0,
+      "seconds_compute": 0.6,
+      "recomputed": false
+    },
+    "training": {
+      "hash": "5a5768410d39999a",
+      "seconds": 28138.1,
+      "seconds_compute": 28138.1,
+      "recomputed": true
+    },
+    "evaluation": {
+      "hash": "c946839b35cd4e59",
+      "seconds": 150.1,
+      "seconds_compute": 150.1,
+      "recomputed": true
+    },
+    "interpretation": {
+      "hash": "785e7488012c95c0",
+      "seconds": 6945.6,
+      "seconds_compute": 6945.6,
+      "recomputed": true
+    },
+    "external_validation": {
+      "hash": "411419e453fbac7b",
+      "seconds": 1183.3,
+      "seconds_compute": 1183.3,
+      "recomputed": true
+    },
+    "deployment": {
+      "hash": "ed9baa7f973eefbe",
+      "seconds": 279.4,
+      "seconds_compute": 279.4,
+      "recomputed": true
+    },
+    "reporting": {
+      "hash": "ace4a04207107f7a",
+      "seconds": 8.0,
+      "seconds_compute": 8.0,
+      "recomputed": true
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "main_target": "prog_wnt_camdr_nb_z",
+  "gates": {
+    "above_chance": {
+      "passed": true,
+      "status": "PASS",
+      "value": 0.716,
+      "threshold": "> 0.05",
+      "source": "evaluation/cv_results.csv",
+      "meaning": "the full model beats the shuffled-label baseline on the main target by a margin"
+    },
+    "beyond_identity": {
+      "passed": true,
+      "status": "PASS",
+      "value": 0.753,
+      "threshold": "> 0.05",
+      "source": "evaluation/cv_results.csv",
+      "meaning": "morphology carries program information beyond the cell-type composition baseline"
+    },
+    "ci_excludes_zero": {
+      "passed": true,
+      "status": "PASS",
+      "value": 0.371,
+      "threshold": "> 0",
+      "source": "evaluation/cv_results.csv",
+      "meaning": "the lower 95 % patient-bootstrap bound of the full model's correlation is above zero"
+    },
+    "shuffled_at_chance": {
+      "passed": true,
+      "status": "PASS",
+      "value": 0.002,
+      "threshold": "|r| < 0.05",
+      "source": "evaluation/cv_results.csv",
+      "meaning": "the shuffled-label baseline sits at chance, so no leak feeds the model"
+    },
+    "calibrated": {
+      "passed": true,
+      "status": "PASS",
+      "value": 0.9136666666666666,
+      "threshold": "in [0.85, 0.95]",
+      "source": "evaluation/calibration.csv",
+      "meaning": "the 90 % Gaussian interval covers about 90 % of held-out cells (pooled; read the per-patient spread too)"
+    },
+    "backbone_stable": {
+      "passed": true,
+      "status": "PASS",
+      "value": 20.0,
+      "threshold": ">= 3 genes",
+      "source": "interpretation/gene_backbone.csv",
+      "meaning": "the main program has at least three genes that survive stability selection over half-patient refits"
+    },
+    "inference_parity": {
+      "passed": true,
+      "status": "PASS",
+      "value": 0.9936329292626532,
+      "threshold": "> 0.95 and no inference error",
+      "source": "deployment/sanity_check.csv",
+      "meaning": "the morphology-only inference path reproduces the training-path predictions on a training slide"
+    },
+    "stage_association": {
+      "passed": true,
+      "status": "PASS",
+      "value": 0.035,
+      "threshold": "PERMANOVA p < 0.05 or trend q < 0.1",
+      "source": "evaluation/stage_association.csv",
+      "meaning": "the patient-level vector of predicted program burdens is associated with disease stage"
+    },
+    "external_validation": {
+      "passed": false,
+      "status": "FAIL",
+      "value": "program_specificity:pass; spatial_fidelity:pass; perturbation_robustness:fail; independent_cohort:skipped; protein_bridge:skipped",
+      "threshold": "validators ran >= 1, every ran validator passed, failed = 0",
+      "source": "external_validation/validation_summary.json",
+      "meaning": "every validator that could run on the available data met its own stated bar; skipped validators are listed with their reason"
+    }
+  },
+  "summary": {
+    "passed": 8,
+    "failed": 1,
+    "not_evaluated": 0,
+    "total": 9
+  },
+  "run_name": "synthetic_v3",
+  "demo_mode": true,
+  "decisions": [
+    "Main target: prog_wnt_camdr_nb_z. Full model per-patient median r = 0.718 (reliability-adjusted 0.723).",
+    "ABOVE CHANCE: full (0.718) exceeds the shuffled-label baseline (0.002) by more than 0.05.",
+    "MORPHOLOGY BEYOND IDENTITY: full (0.718) exceeds composition_only (-0.035); morphology carries program information beyond cell type. Report as the main finding.",
+    "NO IDENTITY BOTTLENECK: oracle (0.760) is not above full (0.718) by 0.05.",
+    "SPATIAL PRIOR USEFUL: full (0.718) exceeds no_neighbours (0.620).",
+    "Across all targets: 13/16 exceed the shuffled baseline by 0.05.",
+    "ABLATION no_program_tokens: full (0.718) vs without (0.710); the program-token cross-attention neither helps nor hurts 0.008 on prog_wnt_camdr_nb_z.",
+    "ABLATION no_grid: full (0.718) vs without (0.725); the patch-block tokens neither helps nor hurts 0.007 on prog_wnt_camdr_nb_z.",
+    "ABLATION no_smooth: full (0.718) vs without (0.715); the neighbourhood consistency term neither helps nor hurts 0.003 on prog_wnt_camdr_nb_z.",
+    "ABLATION align: full (0.718) vs with the contrastive alignment loss switched on (0.689); switching the alignment loss on worsens prog_wnt_camdr_nb_z by 0.029.",
+    "LEARNED VS FIXED TARGETS: learned prog_wnt_camdr_nb_z r = 0.718; fixed-set anchor_wnt_camdr_nb_z r = 0.921; learned programs are not more predictable from morphology."
+  ],
+  "verdict": {
+    "above_chance": true,
+    "morphology_beyond_identity": true,
+    "identity_bottleneck": false,
+    "spatial_prior_useful": true
+  }
+}

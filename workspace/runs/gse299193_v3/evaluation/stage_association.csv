@@ -1,0 +1,17 @@
+vectors,test,program,statistic,p_value,q_value,r2_or_rho,n_patients,n_groups,groups,note
+predicted,permanova,all,4.035459486320817,0.002,,0.4159355818186528,21,4,MGUS:2;MM:10;SMM:5;control:4,"pseudo-F on 7 z-scored programs, Euclidean, 999 permutations"
+predicted,jt_trend,prog_wnt_core_nb_z,128.0,0.001,0.0035,0.7618168239294902,21,4,MGUS:2;MM:10;SMM:5;control:4,increasing along the stage order; expected JT 74.0; 999 permutations
+predicted,jt_trend,prog_adhesion_survival_nb_z,128.0,0.001,0.0035,0.755561028842478,21,4,MGUS:2;MM:10;SMM:5;control:4,increasing along the stage order; expected JT 74.0; 999 permutations
+predicted,jt_trend,prog_pc_stress_survival_nb_z,109.0,0.021,0.024500000000000004,0.5386934658260538,21,4,MGUS:2;MM:10;SMM:5;control:4,increasing along the stage order; expected JT 74.0; 999 permutations
+predicted,jt_trend,prog_t_exhaustion_nb_z,28.0,0.004,0.007,-0.6693700743103095,21,4,MGUS:2;MM:10;SMM:5;control:4,decreasing along the stage order; expected JT 74.0; 999 permutations
+predicted,jt_trend,prog_cytotoxicity_nb_z,37.0,0.019,0.024500000000000004,-0.5261818756520293,21,4,MGUS:2;MM:10;SMM:5;control:4,decreasing along the stage order; expected JT 74.0; 999 permutations
+predicted,jt_trend,prog_extra_0_nb_z,79.0,0.792,0.792,0.06603339258512918,21,4,MGUS:2;MM:10;SMM:5;control:4,increasing along the stage order; expected JT 74.0; 999 permutations
+predicted,jt_trend,prog_extra_1_nb_z,117.0,0.003,0.007,0.6651995442523012,21,4,MGUS:2;MM:10;SMM:5;control:4,increasing along the stage order; expected JT 74.0; 999 permutations
+measured,permanova,all,2.161453402860256,0.032,,0.2761139818580835,21,4,MGUS:2;MM:10;SMM:5;control:4,"pseudo-F on 7 z-scored programs, Euclidean, 999 permutations"
+measured,jt_trend,prog_wnt_core_nb_z,124.0,0.002,0.004666666666666667,0.7089901098613869,21,4,MGUS:2;MM:10;SMM:5;control:4,increasing along the stage order; expected JT 74.0; 999 permutations
+measured,jt_trend,prog_adhesion_survival_nb_z,130.0,0.001,0.0035,0.7618168239294902,21,4,MGUS:2;MM:10;SMM:5;control:4,increasing along the stage order; expected JT 74.0; 999 permutations
+measured,jt_trend,prog_pc_stress_survival_nb_z,137.0,0.001,0.0035,0.8306305698866249,21,4,MGUS:2;MM:10;SMM:5;control:4,increasing along the stage order; expected JT 74.0; 999 permutations
+measured,jt_trend,prog_t_exhaustion_nb_z,39.0,0.02,0.028000000000000004,-0.5317425823960402,21,4,MGUS:2;MM:10;SMM:5;control:4,decreasing along the stage order; expected JT 74.0; 999 permutations
+measured,jt_trend,prog_cytotoxicity_nb_z,32.0,0.006,0.0105,-0.6116777418411966,21,4,MGUS:2;MM:10;SMM:5;control:4,decreasing along the stage order; expected JT 74.0; 999 permutations
+measured,jt_trend,prog_extra_0_nb_z,68.0,0.734,0.8563333333333333,-0.08688604287516996,21,4,MGUS:2;MM:10;SMM:5;control:4,decreasing along the stage order; expected JT 74.0; 999 permutations
+measured,jt_trend,prog_extra_1_nb_z,77.0,0.887,0.8869999999999999,0.03892494720807615,21,4,MGUS:2;MM:10;SMM:5;control:4,increasing along the stage order; expected JT 74.0; 999 permutations

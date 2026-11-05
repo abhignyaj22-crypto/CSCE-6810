@@ -1,0 +1,427 @@
+{
+  "_about": "Per-gene annotation for the four programs in gene_programs.json, so code can print the annotation next to each gene. Literature retrieved from PubMed. See docs/research/PATHWAY_INTERPRETATION.md for the full audit, claim grades, and the corrected program labels.",
+  "_schema": {
+    "class": "one of: wnt_ligand, wnt_receptor, wnt_antagonist, adhesion, survival_tf, cytokine_growth_factor, stress_regulator, immune_receptor, treg_marker, checkpoint, costim_marker, immunoregulatory, cytotoxic_effector, lineage_tf, neutrophil_granule",
+    "pathway_role": "canonical / non-canonical Wnt role where applicable, otherwise the functional role",
+    "mm_evidence": "one sentence on the documented role in multiple myeloma, or the explicit absence of such evidence",
+    "citation_doi": "DOI of the supporting source, or null when no MM-specific evidence was found",
+    "evidence_grade": "established | single-study | none",
+    "is_wnt_component": "true only for Wnt ligands, receptors, co-receptors and secreted Wnt modulators"
+  },
+  "_caveats": [
+    "wnt_camdr is an unsigned sum over ligands, receptors and secreted antagonists whose effects on pathway output have opposite signs, so a high score is NOT a Wnt pathway activity estimate.",
+    "SFRP1 and SFRP2 are silenced by promoter methylation in 35.5 and 52.6 percent of primary myeloma samples, so their detected counts most plausibly report stromal rather than malignant plasma cell biology.",
+    "Three wnt_camdr genes carry evidence pointing toward drug SENSITIVITY or better outcome rather than resistance: WNT10A (selinexor response), NCAM1 (CD56 loss associates with worse survival), BCL2 (t(11;14) venetoclax sensitivity).",
+    "Eight of the eighteen wnt_camdr genes are not Wnt pathway components (MIF, IFNAR2, IGF1, VEGFB, NCAM1, CDH2, IRF4, BCL2); they are the CAM-DR and niche-survival half of the program.",
+    "GSE299193 contains no drug exposure, response or survival data, so no score computed from it can be validated against resistance or progression-free survival.",
+    "Yip et al. 2025 does not report Wnt signalling, CAM-DR or progression-free survival; those findings are from the Ohlstrom et al. 2026 bioRxiv preprint (doi 10.64898/2026.03.23.713195), which is not peer reviewed."
+  ],
+  "programs": {
+    "wnt_camdr": {
+      "WNT5B": {
+        "class": "wnt_ligand",
+        "pathway_role": "Non-canonical Wnt5 family ligand; signals through Frizzled with ROR2 and through planar cell polarity, calcium and JNK effectors rather than beta-catenin stabilisation.",
+        "mm_evidence": "No MM-specific functional evidence found for WNT5B; the Wnt5 ligand evidence in myeloma rests on WNT5A.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": true
+      },
+      "WNT5A": {
+        "class": "wnt_ligand",
+        "pathway_role": "Prototypical non-canonical Wnt ligand and the ligand for ROR2; can also antagonise canonical signalling depending on receptor context.",
+        "mm_evidence": "Reported as the most abundant growth factor in the bone marrow of myeloma patients and the ligand of the ROR2 adhesion axis (Frenquelli 2020); separately, WNT5A/ROR2 activation in mesenchymal stromal cells promotes osteogenic differentiation and is suppressed by myeloma cells (Bolzoni 2013), so the axis is compartment-dependent.",
+        "citation_doi": "10.1038/s41375-019-0486-9",
+        "evidence_grade": "single-study",
+        "is_wnt_component": true
+      },
+      "FRZB": {
+        "class": "wnt_antagonist",
+        "pathway_role": "Secreted Frizzled-related protein 3; sequesters Wnt ligands extracellularly and inhibits both canonical and non-canonical signalling.",
+        "mm_evidence": "Discussed in myeloma in the context of bone disease, where secreted Wnt antagonists impair osteoblast differentiation; no drug resistance evidence found.",
+        "citation_doi": "10.1016/j.blre.2019.100646",
+        "evidence_grade": "single-study",
+        "is_wnt_component": true
+      },
+      "WNT10A": {
+        "class": "wnt_ligand",
+        "pathway_role": "Wnt ligand of the canonical, beta-catenin-stabilising class.",
+        "mm_evidence": "Forms part of a three-gene signature with DUSP1 and ETV7 that predicts RESPONSE to selinexor via upregulated interferon-mediated apoptotic signalling (Restrepo 2022); this is a drug-sensitivity biomarker whose proposed mechanism is interferon rather than Wnt signalling.",
+        "citation_doi": "10.1200/PO.22.00147",
+        "evidence_grade": "single-study",
+        "is_wnt_component": true
+      },
+      "DKK1": {
+        "class": "wnt_antagonist",
+        "pathway_role": "Dickkopf-1; binds LRP5/6 and blocks canonical Wnt signalling specifically.",
+        "mm_evidence": "Overexpressed and secreted by malignant plasma cells in patients with focal bone lesions, where it inhibits osteoblast differentiation and is associated with lytic bone disease (Tian 2003); DKK1 promoter methylation is also listed among the Wnt-regulator lesions in myeloma (van Andel 2019), so its direction in any given sample is ambiguous.",
+        "citation_doi": "10.1056/NEJMoa030847",
+        "evidence_grade": "established",
+        "is_wnt_component": true
+      },
+      "SFRP1": {
+        "class": "wnt_antagonist",
+        "pathway_role": "Secreted Frizzled-related protein 1; extracellular Wnt ligand scavenger inhibiting canonical and non-canonical signalling.",
+        "mm_evidence": "Aberrant promoter hypermethylation in 35.5 percent of primary myeloma samples with associated transcriptional silencing, present from monoclonal gammopathy onward, so SFRP1 is expected to be LOW in malignant plasma cells (Jost 2009).",
+        "citation_doi": "10.1016/j.canlet.2009.02.002",
+        "evidence_grade": "established",
+        "is_wnt_component": true
+      },
+      "SFRP2": {
+        "class": "wnt_antagonist",
+        "pathway_role": "Secreted Frizzled-related protein 2; extracellular Wnt ligand scavenger inhibiting canonical and non-canonical signalling.",
+        "mm_evidence": "Aberrant promoter hypermethylation in 52.6 percent of primary myeloma samples with associated transcriptional silencing, so SFRP2 is expected to be LOW in malignant plasma cells (Jost 2009).",
+        "citation_doi": "10.1016/j.canlet.2009.02.002",
+        "evidence_grade": "established",
+        "is_wnt_component": true
+      },
+      "ROR2": {
+        "class": "wnt_receptor",
+        "pathway_role": "Receptor tyrosine kinase-like orphan receptor 2; the defining non-canonical Wnt co-receptor for WNT5A.",
+        "mm_evidence": "Overexpressed in myeloma; mediates adhesion of myeloma cells to the bone marrow microenvironment, depletion detaches cells from the niche in vivo with consequent apoptosis and delayed progression, and the pathways most deregulated by ROR2 overexpression are PI3K/AKT and mTOR, with clinical PI3K inhibitors reducing adhesion (Frenquelli 2020).",
+        "citation_doi": "10.1038/s41375-019-0486-9",
+        "evidence_grade": "single-study",
+        "is_wnt_component": true
+      },
+      "FZD3": {
+        "class": "wnt_receptor",
+        "pathway_role": "Frizzled-3; seven-pass Wnt receptor associated chiefly with planar cell polarity and other non-canonical outputs, but able to transduce canonical signalling with LRP5/6.",
+        "mm_evidence": "No FZD3-specific myeloma study found; Frizzled family transcripts are present in myeloma cell lines and Wnt3a elicits both beta-catenin stabilisation and a Rho-dependent cytoskeletal response in those cells (Qiang 2003).",
+        "citation_doi": "10.1038/sj.onc.1206239",
+        "evidence_grade": "single-study",
+        "is_wnt_component": true
+      },
+      "LRP6": {
+        "class": "wnt_receptor",
+        "pathway_role": "Low-density lipoprotein receptor-related protein 6; obligate co-receptor for canonical, beta-catenin-dependent Wnt signalling and the target of DKK1.",
+        "mm_evidence": "No LRP6-specific myeloma functional study found; LRP5/6 transcripts are expressed in myeloma lines and are required for Wnt3a-induced beta-catenin accumulation, in contrast to lymphoma lines where they are absent (Qiang 2003).",
+        "citation_doi": "10.1038/sj.onc.1206239",
+        "evidence_grade": "single-study",
+        "is_wnt_component": true
+      },
+      "MIF": {
+        "class": "cytokine_growth_factor",
+        "pathway_role": "Macrophage migration inhibitory factor; a pro-inflammatory cytokine acting through CXCR4 and the COPS5 adaptor. Not a Wnt pathway component.",
+        "mm_evidence": "Markedly elevated in myeloma bone marrow plasma and associated with poorer overall survival; drives adhesion to bone marrow stromal cells by regulating ALCAM, ITGAV and ITGB5, and MIF knockdown or the inhibitor 4-IPP sensitises myeloma cells to chemotherapy in stromal co-culture and in vivo (Zheng 2016). This is the closest match in the program to the stated CAM-DR mechanism.",
+        "citation_doi": "10.1093/jnci/djw131",
+        "evidence_grade": "single-study",
+        "is_wnt_component": false
+      },
+      "IFNAR2": {
+        "class": "cytokine_growth_factor",
+        "pathway_role": "Type I interferon receptor subunit 2, signalling through JAK1 and TYK2 to STAT. Not a Wnt pathway component.",
+        "mm_evidence": "Interferon alpha receptor subunits are expressed in myeloma lines, where receptor crosstalk between the interferon alpha complex and ErbB3 through TYK2 and JAK1 contributes to proliferation in an interferon-responsive line (Walters 2004); the evidence is indirect and not resistance-specific.",
+        "citation_doi": "10.1038/sj.onc.1207203",
+        "evidence_grade": "single-study",
+        "is_wnt_component": false
+      },
+      "IGF1": {
+        "class": "cytokine_growth_factor",
+        "pathway_role": "Insulin-like growth factor 1; niche growth factor signalling through IGF1R to PI3K and AKT. Not a Wnt pathway component.",
+        "mm_evidence": "An established bone marrow microenvironment survival and drug resistance cytokine signalling through PI3K/AKT (Anderson 2003); bortezomib triggers bone marrow fibroblasts from bortezomib-resistant patients to secrete IGF-1 alongside IL-6, IL-8 and TGF-beta, and those fibroblasts protect plasma cells from bortezomib-induced apoptosis (Frassanito 2016).",
+        "citation_doi": "10.1038/leu.2015.289",
+        "evidence_grade": "established",
+        "is_wnt_component": false
+      },
+      "VEGFB": {
+        "class": "cytokine_growth_factor",
+        "pathway_role": "Vascular endothelial growth factor B; VEGFR1 and neuropilin ligand with limited angiogenic activity relative to VEGFA. Not a Wnt pathway component.",
+        "mm_evidence": "No MM-specific evidence found for VEGFB; the myeloma angiogenesis and drug resistance literature concerns VEGFA.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "NCAM1": {
+        "class": "adhesion",
+        "pathway_role": "Neural cell adhesion molecule 1, the CD56 antigen; homophilic immunoglobulin-superfamily adhesion receptor. Not a Wnt pathway component.",
+        "mm_evidence": "CD56 is an aberrant plasma cell marker used in diagnostic flow cytometry, but it is the ABSENCE of CD56 that was associated with significantly worse overall survival (median 24 versus 60 months), so the direction is opposite to a resistance interpretation (Okura 2020).",
+        "citation_doi": "10.1007/s12032-020-01423-4",
+        "evidence_grade": "single-study",
+        "is_wnt_component": false
+      },
+      "CDH2": {
+        "class": "adhesion",
+        "pathway_role": "N-cadherin; calcium-dependent homophilic adhesion molecule. Cadherins sequester beta-catenin at the membrane, which is an indirect rather than a signalling link to Wnt. Not a Wnt pathway component.",
+        "mm_evidence": "Elevated N-cadherin is associated with poor prognosis in newly diagnosed myeloma; knockdown reduces adhesion to bone marrow endothelial cells and reduces tumour burden in vivo, and the antagonist ADH-1 reduces burden when given up front but not in established disease, indicating a role in extravasation and marrow homing rather than in stromal adhesion (Mrozik 2015).",
+        "citation_doi": "10.1111/bjh.13596",
+        "evidence_grade": "single-study",
+        "is_wnt_component": false
+      },
+      "IRF4": {
+        "class": "survival_tf",
+        "pathway_role": "Interferon regulatory factor 4; master plasma cell transcription factor in a reciprocal autoregulatory circuit with MYC. Not a Wnt pathway component.",
+        "mm_evidence": "Myeloma cells are addicted to an aberrant IRF4 regulatory network; RNA interference screening showed IRF4 inhibition is toxic to myeloma lines regardless of transforming oncogenic mechanism (Shaffer 2008). This is a lineage dependency rather than a resistance gene.",
+        "citation_doi": "10.1038/nature07064",
+        "evidence_grade": "established",
+        "is_wnt_component": false
+      },
+      "BCL2": {
+        "class": "survival_tf",
+        "pathway_role": "Anti-apoptotic BCL2-family protein sequestering BH3-only activators at the mitochondrion. Not a Wnt pathway component.",
+        "mm_evidence": "BCL2 dependence defines the t(11;14) subgroup, which is venetoclax-SENSITIVE; the randomised BELLINI trial showed an excess mortality signal driven by non-t(11;14) patients (Chakraborty 2022). High BCL2 therefore predicts sensitivity to a specific agent rather than general resistance. Note also that CAM-DR in myeloma was shown NOT to be explained by BCL2-family upregulation (Damiano 1999).",
+        "citation_doi": "10.1111/bjh.18243",
+        "evidence_grade": "established",
+        "is_wnt_component": false
+      }
+    },
+    "pc_stress_survival": {
+      "DEPTOR": {
+        "class": "stress_regulator",
+        "pathway_role": "DEP-domain-containing mTOR-interacting protein; endogenous inhibitor of mTORC1 and mTORC2 whose overexpression relieves mTORC1 feedback on PI3K and thereby activates AKT.",
+        "mm_evidence": "An mTOR inhibitor frequently overexpressed in a subset of myelomas carrying cyclin D1 or D3 or c-MAF or MAFB translocations, where high DEPTOR is necessary to maintain PI3K and AKT activation and knockdown causes apoptosis (Peterson 2009).",
+        "citation_doi": "10.1016/j.cell.2009.03.046",
+        "evidence_grade": "established",
+        "is_wnt_component": false
+      },
+      "DDIT4": {
+        "class": "stress_regulator",
+        "pathway_role": "DNA damage inducible transcript 4, also known as REDD1; stress-, hypoxia- and glucocorticoid-induced inhibitor of mTORC1 acting via TSC1/TSC2.",
+        "mm_evidence": "No MM-specific functional study verified here; DDIT4 is included as a generic mTORC1 stress regulator.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "EIF2AK3": {
+        "class": "stress_regulator",
+        "pathway_role": "Eukaryotic translation initiation factor 2 alpha kinase 3, which encodes PERK; the endoplasmic reticulum stress sensor of the unfolded protein response that phosphorylates eIF2alpha to attenuate translation. This is the only true unfolded protein response gene in the program.",
+        "mm_evidence": "The unfolded protein response is the stress axis on which immunoglobulin-secreting plasma cells depend and the axis proteasome inhibitors exploit; Wnt inhibition reduces the unfolded protein response and enhances bortezomib-induced death in myeloma (Spaan 2023).",
+        "citation_doi": "10.1182/bloodadvances.2022008442",
+        "evidence_grade": "single-study",
+        "is_wnt_component": false
+      },
+      "TNFRSF13B": {
+        "class": "immune_receptor",
+        "pathway_role": "TNF receptor superfamily member 13B, which encodes TACI; receptor for BAFF and APRIL signalling to NF-kB for plasma cell survival. Not an unfolded protein response or mTOR gene.",
+        "mm_evidence": "BAFF and APRIL are essential for survival of normal and malignant B-lineage cells, and altered expression of these ligands or of their receptors including TACI is reported in multiple myeloma (Shivakumar 2006).",
+        "citation_doi": "10.3816/CLM.2006.n.046",
+        "evidence_grade": "single-study",
+        "is_wnt_component": false
+      },
+      "TLR10": {
+        "class": "immune_receptor",
+        "pathway_role": "Toll-like receptor 10; innate pattern recognition receptor, generally regarded as a negative regulator of TLR2-family signalling. Not an unfolded protein response or mTOR gene.",
+        "mm_evidence": "No MM-specific evidence found.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "IL16": {
+        "class": "cytokine_growth_factor",
+        "pathway_role": "Interleukin 16; pro-inflammatory cytokine and CD4 ligand. Not an unfolded protein response or mTOR gene.",
+        "mm_evidence": "No MM-specific evidence found in the sources reviewed.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      }
+    },
+    "t_exhaustion": {
+      "LAG3": {
+        "class": "checkpoint",
+        "pathway_role": "Lymphocyte activation gene 3; inhibitory co-receptor binding MHC class II and FGL1. A bona fide exhaustion marker.",
+        "mm_evidence": "CD8 T cells in extramedullary myeloma frequently express LAG3 and TIGIT, in a TIGIT/LAG3-dominant rather than PD-1-dominant pattern (Bingham 2026); a preprint reports LAG3-high T cells in plasma-cell-dense marrow niches, increasing at relapse (Ohlstrom 2026, not peer reviewed). Neither tests LAG3 as a response predictor.",
+        "citation_doi": "10.1182/bloodadvances.2026020500",
+        "evidence_grade": "single-study",
+        "is_wnt_component": false
+      },
+      "CD27": {
+        "class": "costim_marker",
+        "pathway_role": "TNF receptor superfamily costimulatory receptor for CD70; a marker of memory and of LESS-differentiated T cells whose expression is typically retained rather than gained in exhaustion. Its presence argues against the exhaustion label.",
+        "mm_evidence": "No myeloma-specific primary study verified here.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "TNFAIP3": {
+        "class": "immunoregulatory",
+        "pathway_role": "TNF alpha induced protein 3, also known as A20; broadly expressed negative regulator of NF-kB, not a T-cell-specific or exhaustion-specific gene.",
+        "mm_evidence": "No myeloma-specific primary study verified here for a T-cell exhaustion role.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "CTLA4": {
+        "class": "checkpoint",
+        "pathway_role": "Inhibitory checkpoint competing with CD28 for CD80 and CD86; expressed on activated and exhausted T cells and constitutively on regulatory T cells, so it is shared between the exhaustion and regulatory interpretations.",
+        "mm_evidence": "Reviewed as part of the regulatory T cell compartment of the myeloma immune microenvironment, whose prognostic significance is described as controversial and still a matter of debate (Hadjiaggelidou 2021).",
+        "citation_doi": "10.3390/jcm10194588",
+        "evidence_grade": "single-study",
+        "is_wnt_component": false
+      },
+      "CD55": {
+        "class": "immunoregulatory",
+        "pathway_role": "Complement decay-accelerating factor; inhibits complement C3 convertase. Not an exhaustion gene and not T-cell-restricted.",
+        "mm_evidence": "No myeloma-specific primary study verified here for a T-cell exhaustion role.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "IL2RA": {
+        "class": "treg_marker",
+        "pathway_role": "Interleukin 2 receptor alpha chain, the CD25 antigen; high constitutive expression defines regulatory T cells and marks recently activated effector T cells. A regulatory and activation marker, not an exhaustion marker.",
+        "mm_evidence": "Part of the CD4+CD25+FOXP3+ regulatory T cell phenotype reviewed in the myeloma microenvironment, with contested prognostic significance (Hadjiaggelidou 2021).",
+        "citation_doi": "10.3390/jcm10194588",
+        "evidence_grade": "single-study",
+        "is_wnt_component": false
+      },
+      "AHR": {
+        "class": "immunoregulatory",
+        "pathway_role": "Aryl hydrocarbon receptor; ligand-activated transcription factor with immunoregulatory roles in regulatory T cell and Th17 differentiation. Not an exhaustion marker.",
+        "mm_evidence": "No myeloma-specific primary study verified here.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "FOXP3": {
+        "class": "treg_marker",
+        "pathway_role": "Forkhead box P3; the lineage-defining transcription factor of regulatory T cells. Not an exhaustion marker.",
+        "mm_evidence": "Regulatory T cells are elevated in several malignancies and the highly immunosuppressive myeloma marrow microenvironment is well described, but data on regulatory T cell numbers and function in myeloma and their correlation with survival are explicitly described as controversial (Hadjiaggelidou 2021).",
+        "citation_doi": "10.3390/jcm10194588",
+        "evidence_grade": "single-study",
+        "is_wnt_component": false
+      }
+    },
+    "cytotoxicity": {
+      "CD8A": {
+        "class": "lineage_tf",
+        "pathway_role": "CD8 alpha chain; MHC class I co-receptor defining cytotoxic T lymphocytes.",
+        "mm_evidence": "Cytotoxic lymphocyte lineage marker; included as a control program member.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "CD8B": {
+        "class": "lineage_tf",
+        "pathway_role": "CD8 beta chain; pairs with CD8A on conventional cytotoxic T lymphocytes.",
+        "mm_evidence": "Cytotoxic lymphocyte lineage marker; included as a control program member.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "NKG7": {
+        "class": "cytotoxic_effector",
+        "pathway_role": "Natural killer cell granule protein 7; regulates cytotoxic granule exocytosis.",
+        "mm_evidence": "Cytotoxic effector marker; included as a control program member.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "GNLY": {
+        "class": "cytotoxic_effector",
+        "pathway_role": "Granulysin; cytolytic and antimicrobial granule protein of natural killer and cytotoxic T cells.",
+        "mm_evidence": "Cytotoxic effector marker; included as a control program member.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "PRF1": {
+        "class": "cytotoxic_effector",
+        "pathway_role": "Perforin 1; forms the pore that delivers granzymes into target cells.",
+        "mm_evidence": "Cytotoxic effector marker; included as a control program member.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "GZMB": {
+        "class": "cytotoxic_effector",
+        "pathway_role": "Granzyme B; serine protease initiating caspase-dependent target cell apoptosis.",
+        "mm_evidence": "Cytotoxic effector marker; included as a control program member.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "GZMH": {
+        "class": "cytotoxic_effector",
+        "pathway_role": "Granzyme H; chymase-like granzyme of terminally differentiated cytotoxic cells.",
+        "mm_evidence": "Cytotoxic effector marker; included as a control program member.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "GZMK": {
+        "class": "cytotoxic_effector",
+        "pathway_role": "Granzyme K; tryptase-like granzyme marking an early-differentiated, often pre-exhausted cytotoxic state.",
+        "mm_evidence": "Cytotoxic effector marker; included as a control program member.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "GZMA": {
+        "class": "cytotoxic_effector",
+        "pathway_role": "Granzyme A; tryptase-like granzyme driving caspase-independent target cell death.",
+        "mm_evidence": "Cytotoxic effector marker; included as a control program member.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "CTSW": {
+        "class": "cytotoxic_effector",
+        "pathway_role": "Cathepsin W; cysteine protease restricted to cytotoxic T and natural killer cells.",
+        "mm_evidence": "Cytotoxic effector marker; included as a control program member.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "KLRD1": {
+        "class": "cytotoxic_effector",
+        "pathway_role": "Killer cell lectin-like receptor D1, the CD94 antigen; pairs with NKG2 receptors on natural killer and cytotoxic T cells.",
+        "mm_evidence": "Natural killer and cytotoxic lymphocyte marker; included as a control program member.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "KLRK1": {
+        "class": "cytotoxic_effector",
+        "pathway_role": "Killer cell lectin-like receptor K1, NKG2D; activating receptor for stress-induced MICA, MICB and ULBP ligands.",
+        "mm_evidence": "Natural killer and cytotoxic lymphocyte activating receptor; included as a control program member.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "IFNG": {
+        "class": "cytotoxic_effector",
+        "pathway_role": "Interferon gamma; the principal type II interferon effector cytokine of activated cytotoxic lymphocytes.",
+        "mm_evidence": "Cytotoxic effector cytokine; included as a control program member.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "TBX21": {
+        "class": "lineage_tf",
+        "pathway_role": "T-box transcription factor 21, T-bet; drives type 1 cytotoxic and Th1 differentiation.",
+        "mm_evidence": "Cytotoxic lineage transcription factor; included as a control program member.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "EOMES": {
+        "class": "lineage_tf",
+        "pathway_role": "Eomesodermin; T-box factor partnering T-bet in cytotoxic differentiation and also associated with exhausted and terminally differentiated states.",
+        "mm_evidence": "Cytotoxic lineage transcription factor; included as a control program member. Its association with terminal differentiation means it is partly shared with the exhaustion axis.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "DEFA3": {
+        "class": "neutrophil_granule",
+        "pathway_role": "Defensin alpha 3, human neutrophil peptide 3; stored in neutrophil azurophil granules. NOT a T cell or natural killer cell effector gene. The gene is also subject to copy-number variation and is absent in a substantial fraction of individuals.",
+        "mm_evidence": "No evidence of a cytotoxic lymphocyte role; detected counts report granulocyte content, so DEFA3 is misplaced in a cytotoxicity program.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      },
+      "DEFA4": {
+        "class": "neutrophil_granule",
+        "pathway_role": "Defensin alpha 4, human neutrophil peptide 4; stored in neutrophil azurophil granules. NOT a T cell or natural killer cell effector gene.",
+        "mm_evidence": "No evidence of a cytotoxic lymphocyte role; detected counts report granulocyte content, so DEFA4 is misplaced in a cytotoxicity program.",
+        "citation_doi": null,
+        "evidence_grade": "none",
+        "is_wnt_component": false
+      }
+    }
+  },
+  "corrected_program_labels": {
+    "wnt_camdr": "Investigator-defined set of ten Wnt ligands, receptors and secreted antagonists plus eight niche adhesion, survival and cytokine genes; the Wnt members have opposing effects on pathway output, so the score is not a Wnt pathway activity estimate, and no drug response data exist in this dataset.",
+    "pc_stress_survival": "Plasma cell stress and survival genes: two mTOR regulators (DEPTOR, DDIT4), one unfolded protein response kinase (EIF2AK3, which encodes PERK) and three cytokine or innate immune receptors (TNFRSF13B, which encodes TACI, plus TLR10 and IL16); the unfolded protein response and mTOR label describes three of six genes.",
+    "t_exhaustion": "Mixed T cell immunoregulation genes: regulatory T cell markers (FOXP3, IL2RA, CTLA4), one inhibitory checkpoint (LAG3), one costimulatory memory marker (CD27) and three general immunoregulatory genes (TNFAIP3, CD55, AHR); only LAG3, and CTLA4 in part, are exhaustion markers, and the prognostic significance of regulatory T cells in myeloma is contested.",
+    "cytotoxicity": "Cytotoxic lymphocyte effector genes, used as a control program; fifteen of seventeen members are T cell or natural killer cell effector or lineage genes, while DEFA3 and DEFA4 encode neutrophil alpha-defensins and report granulocyte content."
+  }
+}

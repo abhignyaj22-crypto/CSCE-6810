@@ -1,0 +1,7 @@
+phase,name,data_present,ran
+1,Xenium within-cohort,True,True
+2,Visium HD + transfer,False,False
+2b,CODEX proteomics bridge,False,False
+3,Clinical endpoints,False,False
+4,Encoder / stain harmonisation,True,True
+5,Batch deployment,False,True

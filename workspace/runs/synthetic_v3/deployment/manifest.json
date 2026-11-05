@@ -1,0 +1,33 @@
+{
+  "component": "deployment",
+  "hash": "dbf19d9f087975bf",
+  "config": {
+    "slide_dir": null,
+    "encoder": "tiny_test",
+    "patch_px": 64,
+    "knn_k": 6,
+    "img_level": 1,
+    "z_project": "max",
+    "stain_mode": "native",
+    "nb_radius_um": 30.0,
+    "um_per_px_level0": 0.2125,
+    "seed": 7
+  },
+  "upstream": {
+    "training": "a2d81df580151581"
+  },
+  "artefacts": [
+    "vmap_check.csv",
+    "sanity_check.csv",
+    "exports/README.txt"
+  ],
+  "git_commit": "unknown",
+  "device": "cpu",
+  "python": "3.12.3",
+  "seconds": 5.7,
+  "seconds_compute": 5.7,
+  "seconds_load": null,
+  "recomputed": true,
+  "computed_at": "2026-11-04 22:30:02",
+  "finished": "2026-11-04 22:30:02"
+}

@@ -1,0 +1,1 @@
+{"time": "2026-11-04T23:21:05", "transformation": "gene_mask", "before": "10029 panel genes", "after": "5075 measured in every slide, 4954 masked", "note": "a gene with zero counts in any slide is masked so it cannot pull that slide's program score down", "examples": ["CYP2A6", "ELMOD1", "EPHA8", "F2", "HTR1A"]}

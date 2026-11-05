@@ -1,0 +1,13 @@
+Main target: prog_wnt_camdr_nb_z. Full model per-patient median r = 0.718 (reliability-adjusted 0.723).
+ABOVE CHANCE: full (0.718) exceeds the shuffled-label baseline (0.002) by more than 0.05.
+MORPHOLOGY BEYOND IDENTITY: full (0.718) exceeds composition_only (-0.035); morphology carries program information beyond cell type. Report as the main finding.
+NO IDENTITY BOTTLENECK: oracle (0.760) is not above full (0.718) by 0.05.
+SPATIAL PRIOR USEFUL: full (0.718) exceeds no_neighbours (0.620).
+Across all targets: 13/16 exceed the shuffled baseline by 0.05.
+ABLATION no_program_tokens: full (0.718) vs without (0.710); the program-token cross-attention neither helps nor hurts 0.008 on prog_wnt_camdr_nb_z.
+ABLATION no_grid: full (0.718) vs without (0.725); the patch-block tokens neither helps nor hurts 0.007 on prog_wnt_camdr_nb_z.
+ABLATION no_smooth: full (0.718) vs without (0.715); the neighbourhood consistency term neither helps nor hurts 0.003 on prog_wnt_camdr_nb_z.
+ABLATION align: full (0.718) vs with the contrastive alignment loss switched on (0.689); switching the alignment loss on worsens prog_wnt_camdr_nb_z by 0.029.
+LEARNED VS FIXED TARGETS: learned prog_wnt_camdr_nb_z r = 0.718; fixed-set anchor_wnt_camdr_nb_z r = 0.921; learned programs are not more predictable from morphology.
+
+verdict: {"above_chance": true, "morphology_beyond_identity": true, "identity_bottleneck": false, "spatial_prior_useful": true}

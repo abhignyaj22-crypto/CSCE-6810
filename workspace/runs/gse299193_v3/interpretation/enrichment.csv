@@ -1,0 +1,49 @@
+program,gene_set,backbone_size,set_size_in_panel,overlap,p_value,overlapping_genes,q_value
+adhesion_survival,pc_stress_survival,106,5,2,0.0041477047327058555,"EIF2AK3, IL16",0.19908982716988105
+adhesion_survival,wnt_camdr,106,15,1,0.2717135939201234,IRF4,1.0
+adhesion_survival,wnt_core,106,8,0,1.0,,1.0
+adhesion_survival,adhesion_survival,106,7,1,0.13743410571446463,IRF4,1.0
+adhesion_survival,t_exhaustion,106,7,0,1.0,,1.0
+adhesion_survival,cytotoxicity,106,12,0,1.0,,1.0
+cytotoxicity,wnt_camdr,12,15,0,1.0,,1.0
+cytotoxicity,wnt_core,12,8,0,1.0,,1.0
+cytotoxicity,adhesion_survival,12,7,0,1.0,,1.0
+cytotoxicity,pc_stress_survival,12,5,0,1.0,,1.0
+cytotoxicity,t_exhaustion,12,7,0,1.0,,1.0
+cytotoxicity,cytotoxicity,12,12,0,1.0,,1.0
+extra_0,wnt_camdr,671,15,0,1.0,,1.0
+extra_0,wnt_core,671,8,0,1.0,,1.0
+extra_0,adhesion_survival,671,7,0,1.0,,1.0
+extra_0,pc_stress_survival,671,5,0,1.0,,1.0
+extra_0,t_exhaustion,671,7,0,1.0,,1.0
+extra_0,cytotoxicity,671,12,0,1.0,,1.0
+extra_1,wnt_camdr,34,15,0,1.0,,1.0
+extra_1,wnt_core,34,8,0,1.0,,1.0
+extra_1,adhesion_survival,34,7,0,1.0,,1.0
+extra_1,pc_stress_survival,34,5,0,1.0,,1.0
+extra_1,t_exhaustion,34,7,0,1.0,,1.0
+extra_1,cytotoxicity,34,12,0,1.0,,1.0
+pc_stress_survival,pc_stress_survival,91,5,1,0.08652997392896744,IL16,0.8306877497180875
+pc_stress_survival,wnt_camdr,91,15,0,1.0,,1.0
+pc_stress_survival,wnt_core,91,8,0,1.0,,1.0
+pc_stress_survival,adhesion_survival,91,7,0,1.0,,1.0
+pc_stress_survival,t_exhaustion,91,7,0,1.0,,1.0
+pc_stress_survival,cytotoxicity,91,12,0,1.0,,1.0
+t_exhaustion,wnt_camdr,88,15,0,1.0,,1.0
+t_exhaustion,wnt_core,88,8,0,1.0,,1.0
+t_exhaustion,adhesion_survival,88,7,0,1.0,,1.0
+t_exhaustion,pc_stress_survival,88,5,0,1.0,,1.0
+t_exhaustion,t_exhaustion,88,7,0,1.0,,1.0
+t_exhaustion,cytotoxicity,88,12,0,1.0,,1.0
+wnt_camdr,wnt_camdr,1,15,0,1.0,,1.0
+wnt_camdr,wnt_core,1,8,0,1.0,,1.0
+wnt_camdr,adhesion_survival,1,7,0,1.0,,1.0
+wnt_camdr,pc_stress_survival,1,5,0,1.0,,1.0
+wnt_camdr,t_exhaustion,1,7,0,1.0,,1.0
+wnt_camdr,cytotoxicity,1,12,0,1.0,,1.0
+wnt_core,adhesion_survival,387,7,3,0.012213335254128476,"IRF4, NCAM1, VEGFB",0.29312004609908343
+wnt_core,wnt_camdr,387,15,4,0.023136498774153417,"FRZB, IRF4, NCAM1, VEGFB",0.37018398038645467
+wnt_core,pc_stress_survival,387,5,2,0.049695928663160784,"EIF2AK3, IL16",0.5963511439579294
+wnt_core,wnt_core,387,8,1,0.470074953362021,FRZB,1.0
+wnt_core,t_exhaustion,387,7,0,1.0,,1.0
+wnt_core,cytotoxicity,387,12,0,1.0,,1.0

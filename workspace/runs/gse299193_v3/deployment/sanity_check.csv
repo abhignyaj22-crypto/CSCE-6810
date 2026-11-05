@@ -1,0 +1,2 @@
+slide,main_target,n_detected,n_segmented,n_matched,match_um,pearson,pred_mean,measured_mean,coverage_90,parity_pearson,parity_error,um_per_px
+GSM9035023,prog_wnt_camdr_nb_z,53700,26146,37282,8.0,0.18173664808273315,0.08696608245372772,-0.5059453845024109,0.8483718684619924,0.8148790596383101,,0.425

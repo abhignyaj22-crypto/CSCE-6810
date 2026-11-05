@@ -1,0 +1,47 @@
+{
+  "component": "feature_extraction",
+  "hash": "f1ab959dd91cf9df",
+  "config": {
+    "encoder": "resnet50",
+    "encoder_token_env": "HF_TOKEN",
+    "commercial_use": false,
+    "patch_px": 64,
+    "grid": 5,
+    "memmap_dir": "/dev/shm/mmprog_features",
+    "emb_batch": 1024,
+    "emb_dtype": "float16",
+    "density_radii_px": [
+      25,
+      50,
+      100
+    ],
+    "knn_k": 6,
+    "num_workers": 8,
+    "pin_memory": true,
+    "persistent_workers": true,
+    "prefetch_factor": 2,
+    "channels_last": true,
+    "compile_encoder": true,
+    "amp_enabled": true,
+    "seed": 7
+  },
+  "upstream": {
+    "preprocess": "f515739eeb278869"
+  },
+  "artefacts": [
+    "emb.f16.npy",
+    "grid.f16.npy",
+    "morpho.npy",
+    "graph.npz",
+    "encoder_card.json"
+  ],
+  "git_commit": "unknown",
+  "device": "cuda",
+  "python": "3.12.3",
+  "seconds": 6.7,
+  "seconds_compute": 499.5,
+  "seconds_load": 6.7,
+  "recomputed": false,
+  "computed_at": "2026-11-05 00:49:11",
+  "finished": "2026-11-05 00:52:30"
+}

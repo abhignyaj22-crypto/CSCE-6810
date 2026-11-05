@@ -1,0 +1,30 @@
+{
+  "component": "preprocess",
+  "hash": "f515739eeb278869",
+  "config": {
+    "min_transcripts": 60,
+    "min_genes": 50,
+    "demo_mode": false,
+    "img_level": 1,
+    "patch_px": 64,
+    "seed": 7
+  },
+  "upstream": {
+    "ingest": "0806c866da27763f"
+  },
+  "artefacts": [
+    "adata.h5ad",
+    "gene_mask.npy",
+    "nuclei.npz",
+    "qc_summary.csv"
+  ],
+  "git_commit": "unknown",
+  "device": "cuda",
+  "python": "3.12.3",
+  "seconds": 1.8,
+  "seconds_compute": 1523.4,
+  "seconds_load": 1.8,
+  "recomputed": false,
+  "computed_at": "2026-11-04 23:46:24",
+  "finished": "2026-11-05 00:52:22"
+}

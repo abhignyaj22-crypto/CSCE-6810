@@ -1,0 +1,17 @@
+# Code changes
+
+Brief record of changes that affect what the pipeline claims, where data lives, or what a run writes down. Scientific decisions stay in `DECISIONS.md`.
+
+## 2026-11-04
+
+**Claims in titles and the problem statement.** `README.md`, `docs/research/RESEARCH_PROBLEM.md`, `docs/research/ALGORITHM_SCOUT_PROGRAMS.md`, `docs/DECISIONS.md` (D1), `docs/RESULTS_SPEC.md`, `main.py`, `src/mmprog/__init__.py`, `src/mmprog/reporting/model_card.py`, and `pyproject.toml` now call the outputs investigator-defined gene-set abundances. Progression-free survival stays with the preprint’s separate 15-gene signature, which this repo does not score. Non-canonical Wnt is described as the ROR2/WNT5A adhesion result. The score definitions in `resources/gene_programs.json` were already worded this way and were not rewritten.
+
+**One tree.** The duplicate copy `mm-morphology-programs 3/` was removed. Its `.gitignore` is at the repo root. `.github/workflows/ci.yml` runs `python main.py`, not the older `scripts/run_pipeline.py`. `src/mmprog/pipeline.py` remains for tests and the `mmprog` command.
+
+**Raw images on a small disk.** `Config.retain_raw_images` (default true). The full GSE299193 run sets it false (`--set run.retain_raw_images=false`) and points `run.local_data` at `/dev/shm/mmprog_raw`. `ImageStore._release_raw_image` then deletes each morphology file after the crop is cached. The count matrix and cell table stay. Crops stay under `workspace/crops/`.
+
+**A broken crop is recomputed.** `ImageStore._load_cached` treats an unreadable `.npz` as a cache miss, deletes it, and crops again. The MGUS slide GSM9035027 left a 6.3 MB fragment when the earlier smoke run was stopped; that fragment stopped ingest. The four intact control crops are kept. The QC note reads example rows as dictionaries (`r["total_counts"]`); the first restart stopped because it used attribute access. The log1p note reads `obs["total_counts"]` before normalisation; the counts layer does not exist until `normalize_log1p` copies it.
+
+**Feature arrays on the memory disk.** The 7×7 ResNet-50 grid for 552,691 cells is 111 GB of float16, and this machine's disk and quota cannot hold it. The full run sets `features.grid=5` (the 7×7 map is average-pooled to 5×5, 53 GB) and `features.memmap_dir=/dev/shm/mmprog_features`. `extract_features` refuses to create the files when that directory lacks the space, writes them there, and symlinks `emb.f16.npy` and `grid.f16.npy` into the component directory. The incomplete 7×7 partials under `feature_extraction/` were deleted. A failed write while the disk was full emptied `config.py` and cut off `embed.py` and `feature_extraction.py`; those three files were restored, and `Config.memmap_dir` was added. Training workers no longer pin host memory: pinning initialises CUDA, and a worker forked after the encoder has used the GPU dies with `cudaErrorInitializationError`. The parent pins each batch before the copy to the device.
+
+**A note at each transformation.** `src/mmprog/observations.py` prints `observation [<name>]` with a before, an after, up to five examples, and appends `observations/<name>.jsonl` in the run directory. Called from cell QC, log1p normalisation, the missing-gene mask, nucleus detection, the image crop, program scores, feature extraction, feature selection, training, evaluation, and interpretation. The image crop also saves up to five original-versus-crop pictures in `observations/image_crop/` while the TIFF is still on disk.

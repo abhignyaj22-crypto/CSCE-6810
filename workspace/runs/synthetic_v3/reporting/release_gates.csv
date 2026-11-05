@@ -1,0 +1,10 @@
+name,status,passed,value,threshold,source,meaning
+above_chance,PASS,True,0.716,> 0.05,evaluation/cv_results.csv,the full model beats the shuffled-label baseline on the main target by a margin
+beyond_identity,PASS,True,0.753,> 0.05,evaluation/cv_results.csv,morphology carries program information beyond the cell-type composition baseline
+ci_excludes_zero,PASS,True,0.371,> 0,evaluation/cv_results.csv,the lower 95 % patient-bootstrap bound of the full model's correlation is above zero
+shuffled_at_chance,PASS,True,0.002,|r| < 0.05,evaluation/cv_results.csv,"the shuffled-label baseline sits at chance, so no leak feeds the model"
+calibrated,PASS,True,0.9136666666666666,"in [0.85, 0.95]",evaluation/calibration.csv,the 90 % Gaussian interval covers about 90 % of held-out cells (pooled; read the per-patient spread too)
+backbone_stable,PASS,True,20.0,>= 3 genes,interpretation/gene_backbone.csv,the main program has at least three genes that survive stability selection over half-patient refits
+inference_parity,PASS,True,0.9936329292626532,> 0.95 and no inference error,deployment/sanity_check.csv,the morphology-only inference path reproduces the training-path predictions on a training slide
+stage_association,PASS,True,0.035,PERMANOVA p < 0.05 or trend q < 0.1,evaluation/stage_association.csv,the patient-level vector of predicted program burdens is associated with disease stage
+external_validation,FAIL,False,program_specificity:pass; spatial_fidelity:pass; perturbation_robustness:fail; independent_cohort:skipped; protein_bridge:skipped,"validators ran >= 1, every ran validator passed, failed = 0",external_validation/validation_summary.json,every validator that could run on the available data met its own stated bar; skipped validators are listed with their reason

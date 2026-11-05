@@ -1,0 +1,7 @@
+loss,lam,metric,value,coherence_mean,n_active_components,seconds,target
+exponential,0.0,auc_patient_median,0.5582236355555555,-0.002954488008259991,128,20.1,prog_wnt_camdr_nb_z
+exponential,0.1,auc_patient_median,0.5560719911111112,0.11186270376245158,128,20.3,prog_wnt_camdr_nb_z
+exponential,0.5,auc_patient_median,0.5538113511111111,0.28089831718098346,124,19.7,prog_wnt_camdr_nb_z
+squared,0.0,pearson_patient_median,0.05316226435648738,0.00750072606011723,124,18.5,prog_wnt_camdr_nb_z
+squared,0.1,pearson_patient_median,0.046807908656804544,0.078347317844808,128,18.0,prog_wnt_camdr_nb_z
+squared,0.5,pearson_patient_median,0.052824245078947896,0.18863910826058014,128,18.4,prog_wnt_camdr_nb_z

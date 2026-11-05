@@ -1,0 +1,31 @@
+# One NVIDIA H100 80 GB, full cohort. Facts behind each setting: docs/ARCHITECTURE_V3.md section 8.
+# batch_cells and emb_batch below are starting points; measure throughput (training/hardware.json records cells/s)
+# and raise them until memory or throughput stops improving. No DistributedDataParallel: one process, one GPU.
+run:
+  run_name: gse299193_h100
+  root: ./workspace
+  local_data: ./workspace/raw
+features:
+  encoder: resnet50          # switch to hoptimus0 (Apache-2.0, gated) or uni (non-commercial, gated) with HF_TOKEN set
+  emb_batch: 1024            # measure; frozen ResNet-50 at 224 px leaves room for more on 80 GB
+  num_workers: 8
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 4
+  channels_last: true
+  compile_encoder: true
+training:
+  batch_cells: 4096          # measure
+  amp_enabled: true
+  amp_dtype: bfloat16        # no GradScaler needed for bf16
+  tf32: true
+  compile_model: true        # mode default, dynamic=False; batches are padded to a static shape
+  compile_mode: default
+  cuda_graphs: false         # enable only after verifying the whole step is static (section 8)
+  max_epochs: 40
+evaluation:
+  stage_test: permanova
+validation:
+  validation_n_random_sets: 200
+interpretation:
+  srb_max_train_cells: 80000

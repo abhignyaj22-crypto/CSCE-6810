@@ -1,0 +1,35 @@
+{
+  "stage_from_title": [
+    [
+      "control",
+      "control"
+    ],
+    [
+      "mgus",
+      "MGUS"
+    ],
+    [
+      "smouldering",
+      "SMM"
+    ],
+    [
+      "smoldering",
+      "SMM"
+    ],
+    [
+      "relapse",
+      "RM"
+    ],
+    [
+      "multiple myeloma",
+      "MM"
+    ]
+  ],
+  "stage_order": {
+    "control": 0,
+    "MGUS": 1,
+    "SMM": 2,
+    "MM": 3,
+    "RM": 4
+  }
+}

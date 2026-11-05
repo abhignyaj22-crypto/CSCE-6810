@@ -1,0 +1,1 @@
+{"time": "2026-11-05T00:49:23", "transformation": "feature_selection", "before": "EMB 2048 dims, MOR 8 morphometrics", "after": "kept 1962 embedding dims and 8 morphometrics", "note": "only dead embedding dimensions and redundant morphometrics are dropped", "examples": ["embedding_dims_total=2048", "embedding_dims_kept=1962", "embedding_dims_dropped=86"]}

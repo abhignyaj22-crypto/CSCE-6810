@@ -1,0 +1,123 @@
+{
+  "_source": "Xenium 5K panel lineage markers used by Yip et al. 2025",
+  "lineages": {
+    "plasma": [
+      "CD38",
+      "XBP1",
+      "TNFRSF17",
+      "SSR4",
+      "MYCN",
+      "TMEFF1",
+      "SLAMF7",
+      "MZB1",
+      "SDC1"
+    ],
+    "T": [
+      "TRAC",
+      "CD3D",
+      "TRGC2",
+      "CD8A",
+      "TRBC2",
+      "GZMK",
+      "KLRG1",
+      "IL32",
+      "CD2",
+      "TRBC1",
+      "CD3E",
+      "CCL5"
+    ],
+    "NK": [
+      "GNLY",
+      "S1PR5",
+      "PRF1",
+      "CD247",
+      "MATK",
+      "IL2RB",
+      "GZMA",
+      "KLRD1",
+      "KLRB1",
+      "CD7",
+      "CTSW",
+      "GZMB",
+      "NKG7"
+    ],
+    "B": [
+      "TCL1A",
+      "CD22",
+      "LTB",
+      "SPIB",
+      "BIRC3",
+      "BCL11A",
+      "LY86",
+      "FOXP1",
+      "CD24",
+      "RASGRP2"
+    ],
+    "granulocyte": [
+      "CTSG",
+      "PRTN3",
+      "ELANE",
+      "AZU1",
+      "MPO",
+      "PRSS57",
+      "MS4A3",
+      "DEFA3",
+      "DEFA4",
+      "CST7",
+      "CEACAM6"
+    ],
+    "monocyte": [
+      "S100A12",
+      "LILRA5",
+      "PLBD1",
+      "MNDA",
+      "CFP",
+      "FOLR3",
+      "FGR",
+      "CLEC7A",
+      "CD14",
+      "CAMP",
+      "ITGAM",
+      "C5AR1"
+    ],
+    "erythroid": [
+      "GYPA",
+      "KLF1",
+      "CA1",
+      "HBM",
+      "CA2",
+      "MYL4",
+      "RHCE",
+      "ACHE",
+      "AHSP"
+    ],
+    "megakaryocyte": [
+      "LY6G6F",
+      "TMEM40",
+      "ITGA2B",
+      "ITGB3",
+      "PTCRA",
+      "CLEC1B",
+      "PF4",
+      "PPBP",
+      "TREML1",
+      "GP6",
+      "GP9"
+    ],
+    "stromal": [
+      "COL5A2",
+      "COL5A1",
+      "BGLAP",
+      "IBSP",
+      "MYH11",
+      "PTH1R",
+      "ACTA2",
+      "SPP1",
+      "ELN",
+      "SPARC",
+      "OMD",
+      "CREB3L1",
+      "MMP13"
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "component": "interpretation",
+  "hash": "5cfa5f02ee5e2328",
+  "config": {
+    "srb_enabled": true,
+    "srb_grid": 8,
+    "srb_lambdas": [
+      0.0,
+      0.1,
+      0.5
+    ],
+    "srb_radius_um": 5.0,
+    "srb_rounds": 60,
+    "srb_max_train_cells": 40000,
+    "attribution_n_cells": 2000,
+    "ig_steps": 32,
+    "backbone_threshold": 0.05,
+    "backbone_min_fold_fraction": 0.8,
+    "motifs_enabled": true,
+    "patch_px": 64,
+    "knn_k": 6,
+    "n_folds": 3,
+    "min_cells_per_patient_metric": 30,
+    "um_per_px_level0": 0.2125,
+    "img_level": 1,
+    "nb_radius_um": 30.0,
+    "seed": 7
+  },
+  "upstream": {
+    "training": "a2d81df580151581",
+    "program_inference": "4508b24e5b505654"
+  },
+  "artefacts": [
+    "srb_results.csv",
+    "srb_maps.npz",
+    "srb_rings.csv",
+    "pathway_attribution.csv",
+    "gene_backbone.csv",
+    "enrichment.csv",
+    "motif_enrichment.csv"
+  ],
+  "git_commit": "unknown",
+  "device": "cpu",
+  "python": "3.12.3",
+  "seconds": 20.3,
+  "seconds_compute": 20.3,
+  "seconds_load": null,
+  "recomputed": true,
+  "computed_at": "2026-11-04 22:29:47",
+  "finished": "2026-11-04 22:29:47"
+}

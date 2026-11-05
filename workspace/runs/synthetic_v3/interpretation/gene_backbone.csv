@@ -1,0 +1,324 @@
+program,gene,selection_fraction,weight_relative_to_max,gene_class,evidence_grade,is_wnt_component,note
+wnt_camdr,BCL2,1.0,0.4978877860479427,survival_tf,established,False,"BCL2 dependence defines the t(11;14) subgroup, which is venetoclax-SENSITIVE; the randomised BELLINI trial showed an exc"
+wnt_camdr,CDH2,1.0,0.3617379719110036,adhesion,single-study,False,Elevated N-cadherin is associated with poor prognosis in newly diagnosed myeloma; knockdown reduces adhesion to bone mar
+wnt_camdr,DKK1,1.0,0.3648070208584726,wnt_antagonist,established,True,"Overexpressed and secreted by malignant plasma cells in patients with focal bone lesions, where it inhibits osteoblast d"
+wnt_camdr,FRZB,1.0,0.283030084175965,wnt_antagonist,single-study,True,"Discussed in myeloma in the context of bone disease, where secreted Wnt antagonists impair osteoblast differentiation; n"
+wnt_camdr,FZD3,1.0,0.6817278755401408,wnt_receptor,single-study,True,No FZD3-specific myeloma study found; Frizzled family transcripts are present in myeloma cell lines and Wnt3a elicits bo
+wnt_camdr,IGF1,1.0,0.5568851823151666,cytokine_growth_factor,established,False,An established bone marrow microenvironment survival and drug resistance cytokine signalling through PI3K/AKT (Anderson 
+wnt_camdr,IRF4,1.0,0.6907498229138561,survival_tf,established,False,Myeloma cells are addicted to an aberrant IRF4 regulatory network; RNA interference screening showed IRF4 inhibition is 
+wnt_camdr,LRP6,1.0,0.7218012536001258,wnt_receptor,single-study,True,No LRP6-specific myeloma functional study found; LRP5/6 transcripts are expressed in myeloma lines and are required for 
+wnt_camdr,NCAM1,1.0,0.34932286253493827,adhesion,single-study,False,"CD56 is an aberrant plasma cell marker used in diagnostic flow cytometry, but it is the ABSENCE of CD56 that was associa"
+wnt_camdr,MIF,1.0,0.7482312142879849,cytokine_growth_factor,single-study,False,Markedly elevated in myeloma bone marrow plasma and associated with poorer overall survival; drives adhesion to bone mar
+wnt_camdr,SFRP2,1.0,0.3425858289716674,wnt_antagonist,established,True,"Aberrant promoter hypermethylation in 52.6 percent of primary myeloma samples with associated transcriptional silencing,"
+wnt_camdr,SFRP1,1.0,0.7028309172928578,wnt_antagonist,established,True,"Aberrant promoter hypermethylation in 35.5 percent of primary myeloma samples with associated transcriptional silencing,"
+wnt_camdr,WNT5A,1.0,0.7843361080254684,wnt_ligand,single-study,True,Reported as the most abundant growth factor in the bone marrow of myeloma patients and the ligand of the ROR2 adhesion a
+wnt_camdr,WNT5B,1.0,0.20843596018879174,wnt_ligand,none,True,No MM-specific functional evidence found for WNT5B; the Wnt5 ligand evidence in myeloma rests on WNT5A.
+wnt_camdr,WNT10A,1.0,0.7406163624859604,wnt_ligand,single-study,True,Forms part of a three-gene signature with DUSP1 and ETV7 that predicts RESPONSE to selinexor via upregulated interferon-
+wnt_camdr,VEGFB,1.0,0.5138907848395392,cytokine_growth_factor,none,False,No MM-specific evidence found for VEGFB; the myeloma angiogenesis and drug resistance literature concerns VEGFA.
+wnt_camdr,IFNAR2,0.95,0.5999707001398676,cytokine_growth_factor,single-study,False,"Interferon alpha receptor subunits are expressed in myeloma lines, where receptor crosstalk between the interferon alpha"
+wnt_camdr,MZB1,0.85,0.9544986879770889,,,,
+wnt_camdr,SSR4,0.85,0.9986914136047108,,,,
+wnt_camdr,SLAMF7,0.85,0.9999999999820887,,,,
+wnt_core,DKK1,1.0,0.8411628084711252,wnt_antagonist,established,True,"Overexpressed and secreted by malignant plasma cells in patients with focal bone lesions, where it inhibits osteoblast d"
+wnt_core,FRZB,1.0,0.9451796680441744,wnt_antagonist,single-study,True,"Discussed in myeloma in the context of bone disease, where secreted Wnt antagonists impair osteoblast differentiation; n"
+wnt_core,FZD3,1.0,0.5468128011210441,wnt_receptor,single-study,True,No FZD3-specific myeloma study found; Frizzled family transcripts are present in myeloma cell lines and Wnt3a elicits bo
+wnt_core,LRP6,1.0,0.5446605768320825,wnt_receptor,single-study,True,No LRP6-specific myeloma functional study found; LRP5/6 transcripts are expressed in myeloma lines and are required for 
+wnt_core,ROR2,1.0,0.4955674896698061,wnt_receptor,single-study,True,"Overexpressed in myeloma; mediates adhesion of myeloma cells to the bone marrow microenvironment, depletion detaches cel"
+wnt_core,SFRP1,1.0,0.5233088243949671,wnt_antagonist,established,True,"Aberrant promoter hypermethylation in 35.5 percent of primary myeloma samples with associated transcriptional silencing,"
+wnt_core,SFRP2,1.0,0.9034938364513583,wnt_antagonist,established,True,"Aberrant promoter hypermethylation in 52.6 percent of primary myeloma samples with associated transcriptional silencing,"
+wnt_core,WNT10A,1.0,0.5102126656211546,wnt_ligand,single-study,True,Forms part of a three-gene signature with DUSP1 and ETV7 that predicts RESPONSE to selinexor via upregulated interferon-
+wnt_core,WNT5A,1.0,0.44041046474760653,wnt_ligand,single-study,True,Reported as the most abundant growth factor in the bone marrow of myeloma patients and the ligand of the ROR2 adhesion a
+wnt_core,WNT5B,1.0,0.9999999999930763,wnt_ligand,none,True,No MM-specific functional evidence found for WNT5B; the Wnt5 ligand evidence in myeloma rests on WNT5A.
+adhesion_survival,BCL2,1.0,0.9186605186880276,survival_tf,established,False,"BCL2 dependence defines the t(11;14) subgroup, which is venetoclax-SENSITIVE; the randomised BELLINI trial showed an exc"
+adhesion_survival,CDH2,1.0,0.9999999999932758,adhesion,single-study,False,Elevated N-cadherin is associated with poor prognosis in newly diagnosed myeloma; knockdown reduces adhesion to bone mar
+adhesion_survival,IFNAR2,1.0,0.7758321351097034,cytokine_growth_factor,single-study,False,"Interferon alpha receptor subunits are expressed in myeloma lines, where receptor crosstalk between the interferon alpha"
+adhesion_survival,IGF1,1.0,0.8266887045141882,cytokine_growth_factor,established,False,An established bone marrow microenvironment survival and drug resistance cytokine signalling through PI3K/AKT (Anderson 
+adhesion_survival,IRF4,1.0,0.6635928100409658,survival_tf,established,False,Myeloma cells are addicted to an aberrant IRF4 regulatory network; RNA interference screening showed IRF4 inhibition is 
+adhesion_survival,MIF,1.0,0.6415041016503557,cytokine_growth_factor,single-study,False,Markedly elevated in myeloma bone marrow plasma and associated with poorer overall survival; drives adhesion to bone mar
+adhesion_survival,NCAM1,1.0,0.9961976001187357,adhesion,single-study,False,"CD56 is an aberrant plasma cell marker used in diagnostic flow cytometry, but it is the ABSENCE of CD56 that was associa"
+adhesion_survival,VEGFB,1.0,0.8115285327301516,cytokine_growth_factor,none,False,No MM-specific evidence found for VEGFB; the myeloma angiogenesis and drug resistance literature concerns VEGFA.
+pc_stress_survival,DDIT4,1.0,0.9999999999948025,stress_regulator,none,False,No MM-specific functional study verified here; DDIT4 is included as a generic mTORC1 stress regulator.
+pc_stress_survival,DEPTOR,1.0,0.6653375195632796,stress_regulator,established,False,An mTOR inhibitor frequently overexpressed in a subset of myelomas carrying cyclin D1 or D3 or c-MAF or MAFB translocati
+pc_stress_survival,EIF2AK3,1.0,0.975131700202019,stress_regulator,single-study,False,The unfolded protein response is the stress axis on which immunoglobulin-secreting plasma cells depend and the axis prot
+pc_stress_survival,IL16,1.0,0.8436287447944018,cytokine_growth_factor,none,False,No MM-specific evidence found in the sources reviewed.
+pc_stress_survival,TLR10,1.0,0.8366123162597308,immune_receptor,none,False,No MM-specific evidence found.
+pc_stress_survival,TNFRSF13B,1.0,0.8711514117634236,immune_receptor,single-study,False,"BAFF and APRIL are essential for survival of normal and malignant B-lineage cells, and altered expression of these ligan"
+t_exhaustion,AHR,1.0,0.9095289439077867,immunoregulatory,none,False,No myeloma-specific primary study verified here.
+t_exhaustion,CD27,1.0,0.829359150447455,costim_marker,none,False,No myeloma-specific primary study verified here.
+t_exhaustion,CD55,1.0,0.9999999999931015,immunoregulatory,none,False,No myeloma-specific primary study verified here for a T-cell exhaustion role.
+t_exhaustion,CTLA4,1.0,0.813933888694687,checkpoint,single-study,False,"Reviewed as part of the regulatory T cell compartment of the myeloma immune microenvironment, whose prognostic significa"
+t_exhaustion,FOXP3,1.0,0.7865860175717652,treg_marker,single-study,False,Regulatory T cells are elevated in several malignancies and the highly immunosuppressive myeloma marrow microenvironment
+t_exhaustion,IL2RA,1.0,0.9099634721159315,treg_marker,single-study,False,"Part of the CD4+CD25+FOXP3+ regulatory T cell phenotype reviewed in the myeloma microenvironment, with contested prognos"
+t_exhaustion,LAG3,1.0,0.8438880127808025,checkpoint,single-study,False,"CD8 T cells in extramedullary myeloma frequently express LAG3 and TIGIT, in a TIGIT/LAG3-dominant rather than PD-1-domin"
+t_exhaustion,TNFAIP3,1.0,0.7729954728626561,immunoregulatory,none,False,No myeloma-specific primary study verified here for a T-cell exhaustion role.
+cytotoxicity,CD8A,1.0,0.32747695162262846,lineage_tf,none,False,Cytotoxic lymphocyte lineage marker; included as a control program member.
+cytotoxicity,CD8B,1.0,0.3058964951895413,lineage_tf,none,False,Cytotoxic lymphocyte lineage marker; included as a control program member.
+cytotoxicity,DEFA3,1.0,0.3835832855487247,neutrophil_granule,none,False,"No evidence of a cytotoxic lymphocyte role; detected counts report granulocyte content, so DEFA3 is misplaced in a cytot"
+cytotoxicity,CTSW,1.0,0.956612103626146,cytotoxic_effector,none,False,Cytotoxic effector marker; included as a control program member.
+cytotoxicity,DEFA4,1.0,0.3404048328648246,neutrophil_granule,none,False,"No evidence of a cytotoxic lymphocyte role; detected counts report granulocyte content, so DEFA4 is misplaced in a cytot"
+cytotoxicity,EOMES,1.0,0.2627186519161052,lineage_tf,none,False,Cytotoxic lineage transcription factor; included as a control program member. Its association with terminal differentiat
+cytotoxicity,TBX21,1.0,0.274971230317421,lineage_tf,none,False,Cytotoxic lineage transcription factor; included as a control program member.
+cytotoxicity,GNLY,1.0,0.9401921843655339,cytotoxic_effector,none,False,Cytotoxic effector marker; included as a control program member.
+cytotoxicity,GZMA,1.0,0.9330141730812486,cytotoxic_effector,none,False,Cytotoxic effector marker; included as a control program member.
+cytotoxicity,GZMB,1.0,0.9401786082238854,cytotoxic_effector,none,False,Cytotoxic effector marker; included as a control program member.
+cytotoxicity,GZMH,1.0,0.3455017938767834,cytotoxic_effector,none,False,Cytotoxic effector marker; included as a control program member.
+cytotoxicity,GZMK,1.0,0.24835796750467662,cytotoxic_effector,none,False,Cytotoxic effector marker; included as a control program member.
+cytotoxicity,IFNG,1.0,0.24973477988215922,cytotoxic_effector,none,False,Cytotoxic effector cytokine; included as a control program member.
+cytotoxicity,KLRD1,1.0,0.9519872972182627,cytotoxic_effector,none,False,Natural killer and cytotoxic lymphocyte marker; included as a control program member.
+cytotoxicity,PRF1,1.0,0.9999999999889102,cytotoxic_effector,none,False,Cytotoxic effector marker; included as a control program member.
+cytotoxicity,KLRK1,1.0,0.30224013960865903,cytotoxic_effector,none,False,Natural killer and cytotoxic lymphocyte activating receptor; included as a control program member.
+cytotoxicity,MATK,1.0,0.33515727581232085,,,,
+cytotoxicity,NKG7,1.0,0.9080603146015055,cytotoxic_effector,none,False,Cytotoxic effector marker; included as a control program member.
+cytotoxicity,IL2RB,0.85,0.21160671699842995,,,,
+cytotoxicity,CD7,0.8,0.22013897373932512,,,,
+cytotoxicity,KLRB1,0.8,0.18024623715262275,,,,
+cytotoxicity,S1PR5,0.8,0.1222203258934994,,,,
+extra_0,ACHE,1.0,0.34642850716943685,,,,
+extra_0,ACTA2,1.0,0.9999999999497826,,,,
+extra_0,AHSP,1.0,0.33676576295670535,,,,
+extra_0,AZU1,1.0,0.3452203184723903,,,,
+extra_0,BCL11A,1.0,0.25225190393548397,,,,
+extra_0,BGLAP,1.0,0.9607116507760474,,,,
+extra_0,BIRC3,1.0,0.24719295743677103,,,,
+extra_0,C5AR1,1.0,0.6418878670648488,,,,
+extra_0,CA1,1.0,0.3917548482449367,,,,
+extra_0,CA2,1.0,0.4585190809284351,,,,
+extra_0,CAMP,1.0,0.5309519320963267,,,,
+extra_0,CCL5,1.0,0.6175368856656368,,,,
+extra_0,CD14,1.0,0.6155896435517975,,,,
+extra_0,CD2,1.0,0.6559357016743985,,,,
+extra_0,CD22,1.0,0.252767153938734,,,,
+extra_0,CD24,1.0,0.19246206905683058,,,,
+extra_0,CD247,1.0,0.4262479825350004,,,,
+extra_0,CD27,1.0,0.11024626595005309,costim_marker,none,False,No myeloma-specific primary study verified here.
+extra_0,CD38,1.0,0.3870751273069281,,,,
+extra_0,CD3D,1.0,0.6768185305027087,,,,
+extra_0,CD3E,1.0,0.649343900814341,,,,
+extra_0,CD7,1.0,0.37488250263479744,,,,
+extra_0,CD8A,1.0,0.4774467368977397,lineage_tf,none,False,Cytotoxic lymphocyte lineage marker; included as a control program member.
+extra_0,CD8B,1.0,0.2896696429718547,lineage_tf,none,False,Cytotoxic lymphocyte lineage marker; included as a control program member.
+extra_0,CEACAM6,1.0,0.31190158699450177,,,,
+extra_0,CFP,1.0,0.5872358372658769,,,,
+extra_0,CLEC1B,1.0,0.4223283000804003,,,,
+extra_0,CLEC7A,1.0,0.5214322421972432,,,,
+extra_0,COL5A1,1.0,0.899896154644101,,,,
+extra_0,COL5A2,1.0,0.9278646669409653,,,,
+extra_0,CREB3L1,1.0,0.9466719918348667,,,,
+extra_0,CST7,1.0,0.3674269801042064,,,,
+extra_0,CTLA4,1.0,0.09421651665183407,checkpoint,single-study,False,"Reviewed as part of the regulatory T cell compartment of the myeloma immune microenvironment, whose prognostic significa"
+extra_0,CTSG,1.0,0.34042606289908967,,,,
+extra_0,DEFA3,1.0,0.11680478762045272,neutrophil_granule,none,False,"No evidence of a cytotoxic lymphocyte role; detected counts report granulocyte content, so DEFA3 is misplaced in a cytot"
+extra_0,DEFA4,1.0,0.23341853394581225,neutrophil_granule,none,False,"No evidence of a cytotoxic lymphocyte role; detected counts report granulocyte content, so DEFA4 is misplaced in a cytot"
+extra_0,DEPTOR,1.0,0.18622773494332973,stress_regulator,established,False,An mTOR inhibitor frequently overexpressed in a subset of myelomas carrying cyclin D1 or D3 or c-MAF or MAFB translocati
+extra_0,DKK1,1.0,0.08572318587665827,wnt_antagonist,established,True,"Overexpressed and secreted by malignant plasma cells in patients with focal bone lesions, where it inhibits osteoblast d"
+extra_0,ELANE,1.0,0.3476071616037587,,,,
+extra_0,ELN,1.0,0.9042747133536008,,,,
+extra_0,EOMES,1.0,0.3306315536521617,lineage_tf,none,False,Cytotoxic lineage transcription factor; included as a control program member. Its association with terminal differentiat
+extra_0,FGR,1.0,0.5984098015798647,,,,
+extra_0,FOLR3,1.0,0.6251003391951256,,,,
+extra_0,FOXP1,1.0,0.2566357765077488,,,,
+extra_0,FRZB,1.0,0.08763311425876559,wnt_antagonist,single-study,True,"Discussed in myeloma in the context of bone disease, where secreted Wnt antagonists impair osteoblast differentiation; n"
+extra_0,FZD3,1.0,0.12336352783475277,wnt_receptor,single-study,True,No FZD3-specific myeloma study found; Frizzled family transcripts are present in myeloma cell lines and Wnt3a elicits bo
+extra_0,GP6,1.0,0.39169327326108844,,,,
+extra_0,GP9,1.0,0.41841556685652537,,,,
+extra_0,GZMK,1.0,0.5590101931065009,cytotoxic_effector,none,False,Cytotoxic effector marker; included as a control program member.
+extra_0,GYPA,1.0,0.3559814759659486,,,,
+extra_0,GZMA,1.0,0.083847026492566,cytotoxic_effector,none,False,Cytotoxic effector marker; included as a control program member.
+extra_0,GZMH,1.0,0.2528480449019804,cytotoxic_effector,none,False,Cytotoxic effector marker; included as a control program member.
+extra_0,IBSP,1.0,0.9586498620486381,,,,
+extra_0,HBM,1.0,0.3572200457018256,,,,
+extra_0,IFNAR2,1.0,0.10741801138884266,cytokine_growth_factor,single-study,False,"Interferon alpha receptor subunits are expressed in myeloma lines, where receptor crosstalk between the interferon alpha"
+extra_0,IFNG,1.0,0.30537721809331814,cytotoxic_effector,none,False,Cytotoxic effector cytokine; included as a control program member.
+extra_0,TBX21,1.0,0.3042580423900774,lineage_tf,none,False,Cytotoxic lineage transcription factor; included as a control program member.
+extra_0,IL16,1.0,0.12142448554979944,cytokine_growth_factor,none,False,No MM-specific evidence found in the sources reviewed.
+extra_0,IL2RB,1.0,0.3870635278742573,,,,
+extra_0,IL32,1.0,0.7111340621186341,,,,
+extra_0,ITGA2B,1.0,0.369631114435778,,,,
+extra_0,ITGAM,1.0,0.5997565348150237,,,,
+extra_0,ITGB3,1.0,0.3890764777563222,,,,
+extra_0,KLF1,1.0,0.3744066304075242,,,,
+extra_0,KLRB1,1.0,0.40449306823439624,,,,
+extra_0,KLRG1,1.0,0.6339286028568597,,,,
+extra_0,KLRK1,1.0,0.34622907788400775,cytotoxic_effector,none,False,Natural killer and cytotoxic lymphocyte activating receptor; included as a control program member.
+extra_0,LAG3,1.0,0.13418343964800183,checkpoint,single-study,False,"CD8 T cells in extramedullary myeloma frequently express LAG3 and TIGIT, in a TIGIT/LAG3-dominant rather than PD-1-domin"
+extra_0,LILRA5,1.0,0.6269648662630272,,,,
+extra_0,LTB,1.0,0.21458825498081108,,,,
+extra_0,LY6G6F,1.0,0.3859520387233516,,,,
+extra_0,LY86,1.0,0.3036817350301733,,,,
+extra_0,MATK,1.0,0.28380779802718764,,,,
+extra_0,MMP13,1.0,0.9339882027618382,,,,
+extra_0,MNDA,1.0,0.5872922878424759,,,,
+extra_0,MPO,1.0,0.31041797138472715,,,,
+extra_0,MYCN,1.0,0.3025499502793553,,,,
+extra_0,MS4A3,1.0,0.33834956465348337,,,,
+extra_0,MYH11,1.0,0.943577553352675,,,,
+extra_0,MYL4,1.0,0.31645285062824896,,,,
+extra_0,PF4,1.0,0.40499064969626647,,,,
+extra_0,MZB1,1.0,0.297253856936262,,,,
+extra_0,NKG7,1.0,0.07702117739257305,cytotoxic_effector,none,False,Cytotoxic effector marker; included as a control program member.
+extra_0,OMD,1.0,0.9336304533398376,,,,
+extra_0,PPBP,1.0,0.41902358111965987,,,,
+extra_0,PLBD1,1.0,0.5945413313394982,,,,
+extra_0,PTCRA,1.0,0.43122369939645067,,,,
+extra_0,PRTN3,1.0,0.37371127866251513,,,,
+extra_0,TRAC,1.0,0.5825276315856848,,,,
+extra_0,TCL1A,1.0,0.2354156683728562,,,,
+extra_0,PTH1R,1.0,0.9813612243812945,,,,
+extra_0,RASGRP2,1.0,0.17137016816432318,,,,
+extra_0,RHCE,1.0,0.3574660913911789,,,,
+extra_0,ROR2,1.0,0.15769066927753767,wnt_receptor,single-study,True,"Overexpressed in myeloma; mediates adhesion of myeloma cells to the bone marrow microenvironment, depletion detaches cel"
+extra_0,S100A12,1.0,0.6718604069392506,,,,
+extra_0,S1PR5,1.0,0.4179034679548288,,,,
+extra_0,SDC1,1.0,0.3687059899312276,,,,
+extra_0,SFRP1,1.0,0.12964744119767577,wnt_antagonist,established,True,"Aberrant promoter hypermethylation in 35.5 percent of primary myeloma samples with associated transcriptional silencing,"
+extra_0,SFRP2,1.0,0.0783466686395113,wnt_antagonist,established,True,"Aberrant promoter hypermethylation in 52.6 percent of primary myeloma samples with associated transcriptional silencing,"
+extra_0,SLAMF7,1.0,0.2838583800153089,,,,
+extra_0,SPARC,1.0,0.9332881430323031,,,,
+extra_0,SPIB,1.0,0.2497364353346151,,,,
+extra_0,SPP1,1.0,0.9448850071822189,,,,
+extra_0,SSR4,1.0,0.3166674336170059,,,,
+extra_0,TRGC2,1.0,0.6238356013594973,,,,
+extra_0,TRBC1,1.0,0.6106358935063232,,,,
+extra_0,TLR10,1.0,0.15447702914334682,immune_receptor,none,False,No MM-specific evidence found.
+extra_0,TMEFF1,1.0,0.3199376967649572,,,,
+extra_0,TMEM40,1.0,0.45905364603450244,,,,
+extra_0,TNFAIP3,1.0,0.1316622310328928,immunoregulatory,none,False,No myeloma-specific primary study verified here for a T-cell exhaustion role.
+extra_0,TNFRSF13B,1.0,0.07069821833364338,immune_receptor,single-study,False,"BAFF and APRIL are essential for survival of normal and malignant B-lineage cells, and altered expression of these ligan"
+extra_0,TNFRSF17,1.0,0.32059563160866217,,,,
+extra_0,WNT5A,1.0,0.13518887547134328,wnt_ligand,single-study,True,Reported as the most abundant growth factor in the bone marrow of myeloma patients and the ligand of the ROR2 adhesion a
+extra_0,WNT10A,1.0,0.13277497561934923,wnt_ligand,single-study,True,Forms part of a three-gene signature with DUSP1 and ETV7 that predicts RESPONSE to selinexor via upregulated interferon-
+extra_0,TRBC2,1.0,0.6276486387851112,,,,
+extra_0,TREML1,1.0,0.3187790221538282,,,,
+extra_0,XBP1,1.0,0.2826212652064855,,,,
+extra_0,FOXP3,0.9,0.07449595650527628,treg_marker,single-study,False,Regulatory T cells are elevated in several malignancies and the highly immunosuppressive myeloma marrow microenvironment
+extra_0,PRSS57,0.9,0.08052451909855061,,,,
+extra_0,MIF,0.85,0.08888385956829302,cytokine_growth_factor,single-study,False,Markedly elevated in myeloma bone marrow plasma and associated with poorer overall survival; drives adhesion to bone mar
+extra_1,ACHE,1.0,0.7798517867651096,,,,
+extra_1,ACTA2,1.0,0.10145064078462089,,,,
+extra_1,AHR,1.0,0.09651501998767532,immunoregulatory,none,False,No myeloma-specific primary study verified here.
+extra_1,AHSP,1.0,0.7841826641216035,,,,
+extra_1,AZU1,1.0,0.7755080100183345,,,,
+extra_1,BCL11A,1.0,0.8815002367224705,,,,
+extra_1,BGLAP,1.0,0.14470332438824413,,,,
+extra_1,BIRC3,1.0,0.8880624503734393,,,,
+extra_1,C5AR1,1.0,0.46791677847439045,,,,
+extra_1,CA1,1.0,0.731277750529075,,,,
+extra_1,CA2,1.0,0.6777096272206062,,,,
+extra_1,CAMP,1.0,0.6002008817379757,,,,
+extra_1,CCL5,1.0,0.4927131226885076,,,,
+extra_1,CD14,1.0,0.5238522699203703,,,,
+extra_1,CD2,1.0,0.465412531602053,,,,
+extra_1,CD22,1.0,0.897580906385052,,,,
+extra_1,CD24,1.0,0.9457389296023839,,,,
+extra_1,CD247,1.0,0.5654753269458545,,,,
+extra_1,CD27,1.0,0.08458764021837913,costim_marker,none,False,No myeloma-specific primary study verified here.
+extra_1,CD38,1.0,0.5924149171728065,,,,
+extra_1,CD3D,1.0,0.44564612513703716,,,,
+extra_1,CD3E,1.0,0.4578065862529944,,,,
+extra_1,CD7,1.0,0.5084575174822561,,,,
+extra_1,CD8A,1.0,0.27875813074000716,lineage_tf,none,False,Cytotoxic lymphocyte lineage marker; included as a control program member.
+extra_1,CD8B,1.0,0.3773625774420401,lineage_tf,none,False,Cytotoxic lymphocyte lineage marker; included as a control program member.
+extra_1,CEACAM6,1.0,0.8138407824937915,,,,
+extra_1,CFP,1.0,0.5294324218716445,,,,
+extra_1,CLEC1B,1.0,0.705435170458953,,,,
+extra_1,CLEC7A,1.0,0.5933829004433055,,,,
+extra_1,COL5A2,1.0,0.17605984418172618,,,,
+extra_1,COL5A1,1.0,0.2270255268603411,,,,
+extra_1,CREB3L1,1.0,0.16796559782331846,,,,
+extra_1,CST7,1.0,0.7675662930283701,,,,
+extra_1,IL16,1.0,0.11237380561093567,cytokine_growth_factor,none,False,No MM-specific evidence found in the sources reviewed.
+extra_1,CTLA4,1.0,0.11931656669856838,checkpoint,single-study,False,"Reviewed as part of the regulatory T cell compartment of the myeloma immune microenvironment, whose prognostic significa"
+extra_1,CTSG,1.0,0.784090733738755,,,,
+extra_1,DEFA3,1.0,0.5866164474298793,neutrophil_granule,none,False,"No evidence of a cytotoxic lymphocyte role; detected counts report granulocyte content, so DEFA3 is misplaced in a cytot"
+extra_1,DEFA4,1.0,0.5213566865657194,neutrophil_granule,none,False,"No evidence of a cytotoxic lymphocyte role; detected counts report granulocyte content, so DEFA4 is misplaced in a cytot"
+extra_1,DEPTOR,1.0,0.1815566227707452,stress_regulator,established,False,An mTOR inhibitor frequently overexpressed in a subset of myelomas carrying cyclin D1 or D3 or c-MAF or MAFB translocati
+extra_1,DKK1,1.0,0.08896123115247807,wnt_antagonist,established,True,"Overexpressed and secreted by malignant plasma cells in patients with focal bone lesions, where it inhibits osteoblast d"
+extra_1,EIF2AK3,1.0,0.07006316648979259,stress_regulator,single-study,False,The unfolded protein response is the stress axis on which immunoglobulin-secreting plasma cells depend and the axis prot
+extra_1,ELANE,1.0,0.7750361339504818,,,,
+extra_1,ELN,1.0,0.1883912795559558,,,,
+extra_1,EOMES,1.0,0.37942780114023184,lineage_tf,none,False,Cytotoxic lineage transcription factor; included as a control program member. Its association with terminal differentiat
+extra_1,FGR,1.0,0.5220087522108062,,,,
+extra_1,FOLR3,1.0,0.48595901376483347,,,,
+extra_1,FOXP1,1.0,0.8737353035532672,,,,
+extra_1,FOXP3,1.0,0.1654437210249951,treg_marker,single-study,False,Regulatory T cells are elevated in several malignancies and the highly immunosuppressive myeloma marrow microenvironment
+extra_1,FZD3,1.0,0.1343810604804773,wnt_receptor,single-study,True,No FZD3-specific myeloma study found; Frizzled family transcripts are present in myeloma cell lines and Wnt3a elicits bo
+extra_1,IL2RB,1.0,0.5001535829327702,,,,
+extra_1,GP6,1.0,0.7381055846701399,,,,
+extra_1,GP9,1.0,0.6993655681777824,,,,
+extra_1,GYPA,1.0,0.7728855265001375,,,,
+extra_1,GZMH,1.0,0.3732204474015509,cytotoxic_effector,none,False,Cytotoxic effector marker; included as a control program member.
+extra_1,GZMB,1.0,0.06791757104512808,cytotoxic_effector,none,False,Cytotoxic effector marker; included as a control program member.
+extra_1,GZMK,1.0,0.282288222041485,cytotoxic_effector,none,False,Cytotoxic effector marker; included as a control program member.
+extra_1,HBM,1.0,0.7711775653091343,,,,
+extra_1,IL32,1.0,0.38039136159079884,,,,
+extra_1,IBSP,1.0,0.1474464411426788,,,,
+extra_1,IFNG,1.0,0.43844578431514186,cytotoxic_effector,none,False,Cytotoxic effector cytokine; included as a control program member.
+extra_1,IGF1,1.0,0.10959428529212022,cytokine_growth_factor,established,False,An established bone marrow microenvironment survival and drug resistance cytokine signalling through PI3K/AKT (Anderson 
+extra_1,IL2RA,1.0,0.0977830511722928,treg_marker,single-study,False,"Part of the CD4+CD25+FOXP3+ regulatory T cell phenotype reviewed in the myeloma microenvironment, with contested prognos"
+extra_1,ITGAM,1.0,0.514912266021143,,,,
+extra_1,ITGA2B,1.0,0.7539418009639188,,,,
+extra_1,IRF4,1.0,0.10874312537270943,survival_tf,established,False,Myeloma cells are addicted to an aberrant IRF4 regulatory network; RNA interference screening showed IRF4 inhibition is 
+extra_1,TRBC2,1.0,0.48309989396113057,,,,
+extra_1,PTH1R,1.0,0.12250803427287009,,,,
+extra_1,RASGRP2,1.0,0.9723486532727097,,,,
+extra_1,ITGB3,1.0,0.726271366968032,,,,
+extra_1,KLF1,1.0,0.7533053862823497,,,,
+extra_1,KLRB1,1.0,0.5262002440939357,,,,
+extra_1,KLRG1,1.0,0.4778850880865329,,,,
+extra_1,KLRK1,1.0,0.3372066501174183,cytotoxic_effector,none,False,Natural killer and cytotoxic lymphocyte activating receptor; included as a control program member.
+extra_1,LY6G6F,1.0,0.7375207878222413,,,,
+extra_1,LILRA5,1.0,0.48920728172652844,,,,
+extra_1,LRP6,1.0,0.16493773348476784,wnt_receptor,single-study,True,No LRP6-specific myeloma functional study found; LRP5/6 transcripts are expressed in myeloma lines and are required for 
+extra_1,LTB,1.0,0.9259082707935724,,,,
+extra_1,MATK,1.0,0.47749523189401283,,,,
+extra_1,LY86,1.0,0.8401600335403596,,,,
+extra_1,MIF,1.0,0.0739843392417513,cytokine_growth_factor,single-study,False,Markedly elevated in myeloma bone marrow plasma and associated with poorer overall survival; drives adhesion to bone mar
+extra_1,MMP13,1.0,0.16863392003053446,,,,
+extra_1,NCAM1,1.0,0.08690160572972876,adhesion,single-study,False,"CD56 is an aberrant plasma cell marker used in diagnostic flow cytometry, but it is the ABSENCE of CD56 that was associa"
+extra_1,MNDA,1.0,0.5339904024416114,,,,
+extra_1,MPO,1.0,0.804910057999263,,,,
+extra_1,MS4A3,1.0,0.7892597262780966,,,,
+extra_1,MYCN,1.0,0.6280305744915337,,,,
+extra_1,MYH11,1.0,0.15926393280348303,,,,
+extra_1,MYL4,1.0,0.8196702075731539,,,,
+extra_1,MZB1,1.0,0.6149468768398072,,,,
+extra_1,PLBD1,1.0,0.5209236375900543,,,,
+extra_1,NKG7,1.0,0.08129218339048154,cytotoxic_effector,none,False,Cytotoxic effector marker; included as a control program member.
+extra_1,OMD,1.0,0.16944857269415556,,,,
+extra_1,PF4,1.0,0.7378469398686778,,,,
+extra_1,PRSS57,1.0,0.9999999999397864,,,,
+extra_1,PPBP,1.0,0.7124391317282591,,,,
+extra_1,PRTN3,1.0,0.7693502311805347,,,,
+extra_1,PTCRA,1.0,0.6968900486302234,,,,
+extra_1,WNT10A,1.0,0.11117983643290806,wnt_ligand,single-study,True,Forms part of a three-gene signature with DUSP1 and ETV7 that predicts RESPONSE to selinexor via upregulated interferon-
+extra_1,TMEFF1,1.0,0.6616261214515741,,,,
+extra_1,TMEM40,1.0,0.6661960805701456,,,,
+extra_1,RHCE,1.0,0.7758874746667745,,,,
+extra_1,S100A12,1.0,0.4398931784650357,,,,
+extra_1,S1PR5,1.0,0.5623849199479259,,,,
+extra_1,SDC1,1.0,0.6397990924338026,,,,
+extra_1,SFRP1,1.0,0.13475062109533237,wnt_antagonist,established,True,"Aberrant promoter hypermethylation in 35.5 percent of primary myeloma samples with associated transcriptional silencing,"
+extra_1,SPP1,1.0,0.1720642287764075,,,,
+extra_1,SLAMF7,1.0,0.6077450328319514,,,,
+extra_1,SPARC,1.0,0.1827026535641827,,,,
+extra_1,SPIB,1.0,0.8855509875112539,,,,
+extra_1,TBX21,1.0,0.40495541592178197,lineage_tf,none,False,Cytotoxic lineage transcription factor; included as a control program member.
+extra_1,SSR4,1.0,0.5558555034224826,,,,
+extra_1,TCL1A,1.0,0.9135480417097607,,,,
+extra_1,TLR10,1.0,0.08172452465026978,immune_receptor,none,False,No MM-specific evidence found.
+extra_1,WNT5B,1.0,0.1303572371489672,wnt_ligand,none,True,No MM-specific functional evidence found for WNT5B; the Wnt5 ligand evidence in myeloma rests on WNT5A.
+extra_1,TREML1,1.0,0.8010986836391598,,,,
+extra_1,TRGC2,1.0,0.4826676895680364,,,,
+extra_1,TNFAIP3,1.0,0.12458997995739703,immunoregulatory,none,False,No myeloma-specific primary study verified here for a T-cell exhaustion role.
+extra_1,TNFRSF13B,1.0,0.10969217301373978,immune_receptor,single-study,False,"BAFF and APRIL are essential for survival of normal and malignant B-lineage cells, and altered expression of these ligan"
+extra_1,TNFRSF17,1.0,0.583968491889265,,,,
+extra_1,TRAC,1.0,0.5218282476769157,,,,
+extra_1,TRBC1,1.0,0.494211102703113,,,,
+extra_1,XBP1,1.0,0.6528082351687741,,,,
+extra_1,WNT5A,1.0,0.15072013791998579,wnt_ligand,single-study,True,Reported as the most abundant growth factor in the bone marrow of myeloma patients and the ligand of the ROR2 adhesion a
+extra_1,VEGFB,1.0,0.09930374884342787,cytokine_growth_factor,none,False,No MM-specific evidence found for VEGFB; the myeloma angiogenesis and drug resistance literature concerns VEGFA.
+extra_1,FRZB,0.9,0.0532133256094394,wnt_antagonist,single-study,True,"Discussed in myeloma in the context of bone disease, where secreted Wnt antagonists impair osteoblast differentiation; n"
+extra_1,GNLY,0.85,0.05798661599563099,cytotoxic_effector,none,False,Cytotoxic effector marker; included as a control program member.
+extra_1,CDH2,0.85,0.05677453876297228,adhesion,single-study,False,Elevated N-cadherin is associated with poor prognosis in newly diagnosed myeloma; knockdown reduces adhesion to bone mar
+extra_1,KLRD1,0.85,0.05490254071983786,cytotoxic_effector,none,False,Natural killer and cytotoxic lymphocyte marker; included as a control program member.
+extra_1,ROR2,0.85,0.09557477123516607,wnt_receptor,single-study,True,"Overexpressed in myeloma; mediates adhesion of myeloma cells to the bone marrow microenvironment, depletion detaches cel"

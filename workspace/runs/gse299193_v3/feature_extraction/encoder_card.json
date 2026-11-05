@@ -1,0 +1,30 @@
+{
+  "loader": "timm",
+  "hub_id": "resnet50",
+  "pretrained": true,
+  "gated": false,
+  "commercial": true,
+  "licence": "Apache-2.0 (timm weights: see timm model card)",
+  "input_px": 224,
+  "dim": 2048,
+  "feature_map": "(B, 2048, 7, 7) from timm forward_features",
+  "source": "timm resnet50 (ImageNet)",
+  "paper": "n/a (ImageNet-pretrained ResNet-50)",
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "name": "resnet50",
+  "weight_hash": "b47b7850781d",
+  "device": "cuda",
+  "channels_last": true,
+  "compiled": true,
+  "grid_tokens": 25,
+  "grid_dim": 2048
+}

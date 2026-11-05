@@ -1,0 +1,49 @@
+program,gene_set,backbone_size,set_size_in_panel,overlap,p_value,overlapping_genes,q_value
+adhesion_survival,adhesion_survival,8,8,8,3.7691769521564374e-13,"BCL2, CDH2, IFNAR2, IGF1, IRF4, MIF, NCAM1, VEGFB",3.61840987407018e-12
+adhesion_survival,wnt_camdr,8,18,8,1.649316450724613e-08,"BCL2, CDH2, IFNAR2, IGF1, IRF4, MIF, NCAM1, VEGFB",9.895898704347678e-08
+adhesion_survival,wnt_core,8,10,0,1.0,,1.0
+adhesion_survival,pc_stress_survival,8,6,0,1.0,,1.0
+adhesion_survival,t_exhaustion,8,8,0,1.0,,1.0
+adhesion_survival,cytotoxicity,8,17,0,1.0,,1.0
+cytotoxicity,cytotoxicity,22,17,17,1.0959668324140877e-17,"CD8A, CD8B, CTSW, DEFA3, DEFA4, EOMES, GNLY, GZMA, GZMB, GZMH, GZMK, IFNG, KLRD1, KLRK1, NKG7, PRF1, TBX21",2.6303203977938103e-16
+cytotoxicity,wnt_camdr,22,18,0,1.0,,1.0
+cytotoxicity,wnt_core,22,10,0,1.0,,1.0
+cytotoxicity,adhesion_survival,22,8,0,1.0,,1.0
+cytotoxicity,pc_stress_survival,22,6,0,1.0,,1.0
+cytotoxicity,t_exhaustion,22,8,0,1.0,,1.0
+extra_0,wnt_camdr,120,18,10,0.9999661266230988,"DKK1, FRZB, FZD3, IFNAR2, MIF, ROR2, SFRP1, SFRP2, WNT10A, WNT5A",1.0
+extra_0,wnt_core,120,10,8,0.8755688539657911,"DKK1, FRZB, FZD3, ROR2, SFRP1, SFRP2, WNT10A, WNT5A",1.0
+extra_0,adhesion_survival,120,8,2,0.9999985441033876,"IFNAR2, MIF",1.0
+extra_0,pc_stress_survival,120,6,4,0.9706634776143502,"DEPTOR, IL16, TLR10, TNFRSF13B",1.0
+extra_0,t_exhaustion,120,8,5,0.9895672080770459,"CD27, CTLA4, FOXP3, LAG3, TNFAIP3",1.0
+extra_0,cytotoxicity,120,17,12,0.9892867987655164,"CD8A, CD8B, DEFA3, DEFA4, EOMES, GZMA, GZMH, GZMK, IFNG, KLRK1, NKG7, TBX21",1.0
+extra_1,wnt_camdr,129,18,15,0.982803927385711,"CDH2, DKK1, FRZB, FZD3, IGF1, IRF4, LRP6, MIF, NCAM1, ROR2, SFRP1, VEGFB, WNT10A, WNT5A, WNT5B",1.0
+extra_1,wnt_core,129,10,9,0.8704988307932547,"DKK1, FRZB, FZD3, LRP6, ROR2, SFRP1, WNT10A, WNT5A, WNT5B",1.0
+extra_1,adhesion_survival,129,8,6,0.9907460650125408,"CDH2, IGF1, IRF4, MIF, NCAM1, VEGFB",1.0
+extra_1,pc_stress_survival,129,6,5,0.9503316461993624,"DEPTOR, EIF2AK3, IL16, TLR10, TNFRSF13B",1.0
+extra_1,t_exhaustion,129,8,6,0.9907460650125408,"AHR, CD27, CTLA4, FOXP3, IL2RA, TNFAIP3",1.0
+extra_1,cytotoxicity,129,17,14,0.9861855677313784,"CD8A, CD8B, DEFA3, DEFA4, EOMES, GNLY, GZMB, GZMH, GZMK, IFNG, KLRD1, KLRK1, NKG7, TBX21",1.0
+pc_stress_survival,pc_stress_survival,6,6,6,1.1638679974408769e-10,"DDIT4, DEPTOR, EIF2AK3, IL16, TLR10, TNFRSF13B",7.98080912530887e-10
+pc_stress_survival,wnt_camdr,6,18,0,1.0,,1.0
+pc_stress_survival,wnt_core,6,10,0,1.0,,1.0
+pc_stress_survival,adhesion_survival,6,8,0,1.0,,1.0
+pc_stress_survival,t_exhaustion,6,8,0,1.0,,1.0
+pc_stress_survival,cytotoxicity,6,17,0,1.0,,1.0
+t_exhaustion,t_exhaustion,8,8,8,3.7691769521564374e-13,"AHR, CD27, CD55, CTLA4, FOXP3, IL2RA, LAG3, TNFAIP3",3.61840987407018e-12
+t_exhaustion,wnt_camdr,8,18,0,1.0,,1.0
+t_exhaustion,wnt_core,8,10,0,1.0,,1.0
+t_exhaustion,adhesion_survival,8,8,0,1.0,,1.0
+t_exhaustion,pc_stress_survival,8,6,0,1.0,,1.0
+t_exhaustion,cytotoxicity,8,17,0,1.0,,1.0
+wnt_camdr,wnt_camdr,20,18,17,8.340028809505081e-18,"BCL2, CDH2, DKK1, FRZB, FZD3, IFNAR2, IGF1, IRF4, LRP6, MIF, NCAM1, SFRP1, SFRP2, VEGFB, WNT10A, WNT5A, WNT5B",2.6303203977938103e-16
+wnt_camdr,wnt_core,20,10,9,4.0464446211793006e-08,"DKK1, FRZB, FZD3, LRP6, SFRP1, SFRP2, WNT10A, WNT5A, WNT5B",2.1581037979622936e-07
+wnt_camdr,adhesion_survival,20,8,8,4.7480322066314635e-08,"BCL2, CDH2, IFNAR2, IGF1, IRF4, MIF, NCAM1, VEGFB",2.2790554591831026e-07
+wnt_camdr,pc_stress_survival,20,6,0,1.0,,1.0
+wnt_camdr,t_exhaustion,20,8,0,1.0,,1.0
+wnt_camdr,cytotoxicity,20,17,0,1.0,,1.0
+wnt_core,wnt_core,10,10,10,2.022814106702918e-15,"DKK1, FRZB, FZD3, LRP6, ROR2, SFRP1, SFRP2, WNT10A, WNT5A, WNT5B",3.2365025707246686e-14
+wnt_core,wnt_camdr,10,18,10,8.851429968110627e-11,"DKK1, FRZB, FZD3, LRP6, ROR2, SFRP1, SFRP2, WNT10A, WNT5A, WNT5B",7.081143974488502e-10
+wnt_core,adhesion_survival,10,8,0,1.0,,1.0
+wnt_core,pc_stress_survival,10,6,0,1.0,,1.0
+wnt_core,t_exhaustion,10,8,0,1.0,,1.0
+wnt_core,cytotoxicity,10,17,0,1.0,,1.0

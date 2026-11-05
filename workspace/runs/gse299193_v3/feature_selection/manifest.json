@@ -1,0 +1,29 @@
+{
+  "component": "feature_selection",
+  "hash": "7c7b74e22e94d1c7",
+  "config": {
+    "selection_enabled": true,
+    "selection_variance_floor": 1e-06,
+    "selection_corr_threshold": 0.98,
+    "selection_report_top": 20,
+    "pca_dim": 128,
+    "seed": 7
+  },
+  "upstream": {
+    "feature_extraction": "f1ab959dd91cf9df",
+    "program_inference": "f451b3b94c1ce74e"
+  },
+  "artefacts": [
+    "feature_selection.json",
+    "selection_report.csv"
+  ],
+  "git_commit": "unknown",
+  "device": "cuda",
+  "python": "3.12.3",
+  "seconds": 0.0,
+  "seconds_compute": 11.1,
+  "seconds_load": 0.0,
+  "recomputed": false,
+  "computed_at": "2026-11-05 00:49:23",
+  "finished": "2026-11-05 00:52:30"
+}

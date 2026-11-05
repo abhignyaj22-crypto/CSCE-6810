@@ -1,0 +1,229 @@
+{
+  "_source": "Marker-to-lineage mapping for a typical human bone marrow CODEX / PhenoCycler panel. The choice of markers follows the published human bone marrow CODEX atlases (for example Bandyopadhyay et al., 2024, Cell, https://doi.org/10.1016/j.cell.2024.04.013) in spirit; this list is a generic panel and is not claimed to be any study's exact antibody list. Column names in a real table are matched case-insensitively against the marker name and its aliases.",
+  "_scoring": "Per cell: arcsinh(intensity / 5), then z-score per marker across cells; lineage score = mean of positive markers minus mean of negative markers; the cell takes the argmax lineage. This mirrors the marker-score argmax used for the RNA lineage labels so the two labelings are comparable.",
+  "aliases": {
+    "CD138": [
+      "SDC1",
+      "Syndecan-1",
+      "Syndecan1"
+    ],
+    "CD38": [
+      "CD38"
+    ],
+    "CD56": [
+      "NCAM1",
+      "NCAM"
+    ],
+    "CD3": [
+      "CD3e",
+      "CD3E",
+      "CD3epsilon"
+    ],
+    "CD4": [
+      "CD4"
+    ],
+    "CD8": [
+      "CD8a",
+      "CD8A"
+    ],
+    "FOXP3": [
+      "FoxP3",
+      "Foxp3"
+    ],
+    "CD20": [
+      "MS4A1"
+    ],
+    "CD19": [
+      "CD19"
+    ],
+    "PAX5": [
+      "Pax5",
+      "BSAP"
+    ],
+    "MPO": [
+      "Myeloperoxidase"
+    ],
+    "CD15": [
+      "FUT4",
+      "SSEA-1"
+    ],
+    "CD68": [
+      "CD68"
+    ],
+    "CD14": [
+      "CD14"
+    ],
+    "CD163": [
+      "CD163"
+    ],
+    "CD71": [
+      "TFRC",
+      "Transferrin receptor"
+    ],
+    "GlycophorinA": [
+      "GYPA",
+      "Glycophorin A",
+      "CD235a",
+      "CD235ab"
+    ],
+    "CD61": [
+      "ITGB3"
+    ],
+    "CD41": [
+      "ITGA2B",
+      "CD41a"
+    ],
+    "SMA": [
+      "aSMA",
+      "alpha-SMA",
+      "ACTA2",
+      "a-SMA"
+    ],
+    "CD34": [
+      "CD34"
+    ],
+    "Vimentin": [
+      "VIM"
+    ],
+    "CollagenIV": [
+      "Collagen IV",
+      "COL4A1",
+      "Col IV",
+      "ColIV"
+    ],
+    "LAG3": [
+      "Lag3",
+      "CD223"
+    ],
+    "PD1": [
+      "PDCD1",
+      "PD-1",
+      "CD279"
+    ],
+    "TIM3": [
+      "HAVCR2",
+      "Tim-3",
+      "CD366"
+    ],
+    "DAPI": [
+      "DAPI",
+      "Hoechst"
+    ]
+  },
+  "lineages": {
+    "plasma": {
+      "positive": [
+        "CD138",
+        "CD38"
+      ],
+      "negative": [
+        "CD3",
+        "CD20"
+      ]
+    },
+    "T": {
+      "positive": [
+        "CD3",
+        "CD4",
+        "CD8"
+      ],
+      "negative": [
+        "CD138",
+        "CD20"
+      ]
+    },
+    "T_regulatory": {
+      "positive": [
+        "CD3",
+        "CD4",
+        "FOXP3"
+      ],
+      "negative": [
+        "CD8"
+      ]
+    },
+    "NK": {
+      "positive": [
+        "CD56"
+      ],
+      "negative": [
+        "CD3",
+        "CD138"
+      ]
+    },
+    "B": {
+      "positive": [
+        "CD20",
+        "CD19",
+        "PAX5"
+      ],
+      "negative": [
+        "CD138",
+        "CD3"
+      ]
+    },
+    "granulocyte": {
+      "positive": [
+        "MPO",
+        "CD15"
+      ],
+      "negative": [
+        "CD3",
+        "CD138"
+      ]
+    },
+    "monocyte": {
+      "positive": [
+        "CD68",
+        "CD14",
+        "CD163"
+      ],
+      "negative": [
+        "CD3",
+        "CD138"
+      ]
+    },
+    "erythroid": {
+      "positive": [
+        "CD71",
+        "GlycophorinA"
+      ],
+      "negative": [
+        "CD45"
+      ]
+    },
+    "megakaryocyte": {
+      "positive": [
+        "CD61",
+        "CD41"
+      ],
+      "negative": [
+        "CD3"
+      ]
+    },
+    "stromal": {
+      "positive": [
+        "SMA",
+        "CD34",
+        "Vimentin",
+        "CollagenIV"
+      ],
+      "negative": [
+        "CD138",
+        "CD3"
+      ]
+    }
+  },
+  "myeloma_associated": {
+    "CD56": {
+      "aberrant": true,
+      "note": "CD56 (NCAM1) is aberrantly expressed on most myeloma plasma cells and absent on normal plasma cells; it is listed under NK for lineage scoring and flagged here so a CD138+CD56+ cell is read as myeloma-associated, not NK."
+    }
+  },
+  "exhaustion_markers": [
+    "LAG3",
+    "PD1",
+    "TIM3"
+  ],
+  "plasma_marker": "CD138"
+}

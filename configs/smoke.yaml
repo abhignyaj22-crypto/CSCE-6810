@@ -1,0 +1,17 @@
+# Smoke run on real data: one trephine per stage, three variants, one seed. About 30 minutes on a T4 or H100.
+run:
+  run_name: gse299193_smoke_v3
+  root: ./workspace
+  local_data: ./workspace/raw
+ingest:
+  sample_limit: 4
+training:
+  n_folds: 4
+  seeds: [7]
+  model_variants: [full, shuffled, no_program_tokens]
+  max_epochs: 20
+evaluation:
+  n_boot: 100
+  stage_test: permanova
+interpretation:
+  srb_rounds: 60

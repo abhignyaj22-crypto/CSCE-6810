@@ -1,0 +1,13 @@
+{
+  "device": "cpu",
+  "amp": false,
+  "amp_dtype": null,
+  "tf32": false,
+  "compile": false,
+  "torch": "2.13.0+cu130",
+  "cells_per_second_final_fit": 2279.6,
+  "n_cells": 18000,
+  "batch_cells": 1024,
+  "compile_model": false,
+  "cuda_graphs": false
+}

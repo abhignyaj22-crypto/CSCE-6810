@@ -1,0 +1,15 @@
+{
+  "device": "cuda",
+  "amp": true,
+  "amp_dtype": "bfloat16",
+  "tf32": true,
+  "compile": false,
+  "device_name": "NVIDIA H100 NVL",
+  "memory_gb": 99.9,
+  "torch": "2.13.0+cu130",
+  "cells_per_second_final_fit": 17194.9,
+  "n_cells": 552691,
+  "batch_cells": 4096,
+  "compile_model": true,
+  "cuda_graphs": false
+}

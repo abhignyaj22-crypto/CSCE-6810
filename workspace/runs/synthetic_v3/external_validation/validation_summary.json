@@ -1,0 +1,79 @@
+{
+  "program_specificity": {
+    "main_target": "prog_wnt_camdr_nb_z",
+    "median_z": 49.62405690953436,
+    "median_r_target": 0.7177126223535084,
+    "median_r_proxy": 0.6880017485380898,
+    "median_null_mean": -0.1913828560520951,
+    "median_margin_over_null_q95": 0.8859242639720442,
+    "fraction_patients_p_below_0_05": 1.0,
+    "median_r_half_a": 0.7124157734369221,
+    "median_r_half_b": 0.6501119540862816,
+    "targets_with_median_z_above_2": 4,
+    "targets_tested": 8,
+    "passed": true,
+    "pass_bar": "median_z > 2 on the main target and both split-gene halves correlate positively",
+    "status": "ran",
+    "reason": null,
+    "n_random_sets": 50,
+    "summary_table": "program_specificity_summary.csv",
+    "reading": "median_z above 2 (null spread floored at 1/sqrt(n cells)), a positive margin over the null 95th percentile and both half-correlations positive mean the prediction tracks the program, not any gene set of the same expression level",
+    "table": "program_specificity.csv"
+  },
+  "spatial_fidelity": {
+    "main_target": "prog_wnt_camdr_nb_z",
+    "n_patients": 6,
+    "median_moran_pred": 0.914633952398588,
+    "median_moran_measured": 0.9388219340196862,
+    "median_moran_ratio": 0.983821599794483,
+    "cohens_d_pred": 0.7364482283592224,
+    "cohens_d_measured": 0.8748952150344849,
+    "niche_sign_agreement": true,
+    "passed": true,
+    "pass_bar": "0.5 <= median Moran ratio <= 2 and the plasma-dense niche contrast has the measured sign, on the main target",
+    "status": "ran",
+    "reason": null,
+    "reading": "moran_ratio near 1 means the predicted map is as spatially organised as the tissue; niche sign agreement means the plasma-dense contrast has the measured direction",
+    "table": "spatial_fidelity.csv"
+  },
+  "perturbation_robustness": {
+    "main_target": "prog_wnt_camdr_nb_z",
+    "n_perturbations": 2,
+    "min_spearman_main": 0.41727446371549,
+    "median_spearman_all": 0.7665393170137691,
+    "max_mean_abs_shift_main": 0.2734743211936345,
+    "worst_perturbation_main": "gamma_0.8",
+    "passed": false,
+    "pass_bar": "Spearman between perturbed and clean predictions > 0.9 on the main target under every perturbation",
+    "status": "ran",
+    "reason": null,
+    "slide": "DEMO_P0",
+    "n_nuclei": 3740,
+    "perturbations": [
+      "gamma_0.8",
+      "rot90"
+    ],
+    "reading": "spearman_vs_clean above 0.9 on the main target under every perturbation is the working bar; a proxy for scanner shift, not a multi-site study",
+    "table": "perturbation_robustness.csv"
+  },
+  "independent_cohort": {
+    "status": "skipped",
+    "reason": "no independent cohort manifest; set validation.validation_cohort_manifest to a JSON manifest (Xenium or Visium HD rows with local paths, or {\"demo\": {...}} for a synthetic cohort). The Visium HD trephine cohort of Ohlstrom et al. 2026 (preprint) is embargoed as of writing (docs/DATA.md)"
+  },
+  "protein_bridge": {
+    "status": "skipped",
+    "reason": "set codex_table (cell-by-marker CSV/parquet with x, y) and codex_dapi (DAPI image of the same section); no public dataset pairs CODEX with Xenium on the same myeloma trephine"
+  },
+  "_overall": {
+    "ran": 3,
+    "skipped": 2,
+    "failed": 0,
+    "validators": [
+      "program_specificity",
+      "spatial_fidelity",
+      "perturbation_robustness",
+      "independent_cohort",
+      "protein_bridge"
+    ]
+  }
+}

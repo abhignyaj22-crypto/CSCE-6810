@@ -1,0 +1,48 @@
+{
+  "component": "external_validation",
+  "hash": "411419e453fbac7b",
+  "config": {
+    "validation_n_random_sets": 200,
+    "validation_perturbations": [
+      "gamma_0.8",
+      "gamma_1.25",
+      "blur_1.0",
+      "rot90",
+      "noise_0.02",
+      "scale_0.9"
+    ],
+    "validation_cohort_manifest": null,
+    "codex_table": null,
+    "codex_dapi": null,
+    "codex_um_per_px": null,
+    "codex_dapi_um_per_px": null,
+    "nb_radius_um": 30,
+    "knn_k": 6,
+    "encoder": "resnet50",
+    "patch_px": 64,
+    "img_level": 1,
+    "z_project": "max",
+    "stain_mode": "native",
+    "target_spaces": [
+      "cell",
+      "nb"
+    ],
+    "target_norm": "cohort",
+    "seed": 7
+  },
+  "upstream": {
+    "training": "5a5768410d39999a"
+  },
+  "artefacts": [
+    "validation_summary.json"
+  ],
+  "git_commit": "unknown",
+  "device": "cuda",
+  "python": "3.12.3",
+  "seconds": 1183.3,
+  "seconds_compute": 1183.3,
+  "seconds_load": null,
+  "recomputed": true,
+  "computed_at": "2026-11-05 10:59:27",
+  "finished": "2026-11-05 10:59:27"
+}

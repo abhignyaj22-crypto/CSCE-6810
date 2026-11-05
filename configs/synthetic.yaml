@@ -1,0 +1,47 @@
+# Synthetic fixture: no download, CPU, every component in a few minutes. Proves the code path, not the biology.
+run:
+  run_name: synthetic_v3
+  root: ./workspace
+  local_data: ./workspace/raw
+  demo_mode: true
+  device: cpu
+ingest:
+  demo_n_patients: 6
+  demo_cells_per: 3000
+  demo_img_size: 1024
+preprocess:
+  max_cells_per_sample: 2000
+programs:
+  programs_max_iter: 60
+  programs_fit_cells: 20000
+features:
+  encoder: tiny_test
+  grid: 8
+  num_workers: 0
+  persistent_workers: false
+selection:
+  pca_dim: 32
+model:
+  d_model: 64
+  n_layers: 1
+  n_heads: 1
+training:
+  n_folds: 3
+  seeds: [7, 8]
+  model_variants: [full, no_neighbours, no_grid, no_program_tokens, no_comp, no_smooth, align, shuffled, oracle, anchor_only_targets]
+  batch_cells: 1024
+  max_epochs: 8
+  patience: 3
+  warmup_steps: 10
+  amp_enabled: false
+evaluation:
+  n_boot: 50
+  stage_test: permanova
+  stage_n_perm: 199
+  manova_n_perm: 199
+interpretation:
+  srb_rounds: 60
+  attribution_n_cells: 2000
+validation:
+  validation_n_random_sets: 50
+  validation_perturbations: [gamma_0.8, rot90]

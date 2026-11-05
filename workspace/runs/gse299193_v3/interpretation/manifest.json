@@ -1,0 +1,51 @@
+{
+  "component": "interpretation",
+  "hash": "785e7488012c95c0",
+  "config": {
+    "srb_enabled": true,
+    "srb_grid": 8,
+    "srb_lambdas": [
+      0.0,
+      0.1,
+      0.5
+    ],
+    "srb_radius_um": 5.0,
+    "srb_rounds": 120,
+    "srb_max_train_cells": 40000,
+    "attribution_n_cells": 20000,
+    "ig_steps": 32,
+    "backbone_threshold": 0.05,
+    "backbone_min_fold_fraction": 0.8,
+    "motifs_enabled": true,
+    "patch_px": 64,
+    "knn_k": 6,
+    "n_folds": 7,
+    "min_cells_per_patient_metric": 30,
+    "um_per_px_level0": 0.2125,
+    "img_level": 1,
+    "nb_radius_um": 30,
+    "seed": 7
+  },
+  "upstream": {
+    "training": "5a5768410d39999a",
+    "program_inference": "f451b3b94c1ce74e"
+  },
+  "artefacts": [
+    "srb_results.csv",
+    "srb_maps.npz",
+    "srb_rings.csv",
+    "pathway_attribution.csv",
+    "gene_backbone.csv",
+    "enrichment.csv",
+    "motif_enrichment.csv"
+  ],
+  "git_commit": "unknown",
+  "device": "cuda",
+  "python": "3.12.3",
+  "seconds": 6945.6,
+  "seconds_compute": 6945.6,
+  "seconds_load": null,
+  "recomputed": true,
+  "computed_at": "2026-11-05 10:39:43",
+  "finished": "2026-11-05 10:39:43"
+}

@@ -1,0 +1,41 @@
+{
+  "component": "evaluation",
+  "hash": "868570b83387541a",
+  "config": {
+    "n_boot": 50,
+    "min_cells_per_patient_metric": 30,
+    "coverage_levels": [
+      0.5,
+      0.9
+    ],
+    "conformal_alpha": 0.1,
+    "stage_test": "permanova",
+    "stage_n_perm": 199,
+    "manova_n_perm": 199,
+    "clinical_csv": null,
+    "min_plasma_for_burden": 50,
+    "n_folds": 3,
+    "seed": 7
+  },
+  "upstream": {
+    "training": "a2d81df580151581"
+  },
+  "artefacts": [
+    "cv_results.csv",
+    "cv_results_reliability_adjusted.csv",
+    "calibration.csv",
+    "decisions.txt",
+    "program_burden.csv",
+    "stage_association.csv",
+    "per_patient.csv"
+  ],
+  "git_commit": "unknown",
+  "device": "cpu",
+  "python": "3.12.3",
+  "seconds": 4.3,
+  "seconds_compute": 4.3,
+  "seconds_load": null,
+  "recomputed": true,
+  "computed_at": "2026-11-04 22:29:26",
+  "finished": "2026-11-04 22:29:26"
+}

@@ -1,0 +1,48 @@
+{
+  "component": "reporting",
+  "hash": "ace4a04207107f7a",
+  "config": {
+    "run_name": "gse299193_v3",
+    "n_folds": 7,
+    "encoder": "resnet50",
+    "patch_px": 64,
+    "pca_dim": 128,
+    "target_norm": "cohort",
+    "nb_radius_um": 30,
+    "srb_grid": 8,
+    "demo_mode": false,
+    "clinical_csv": null,
+    "commpass_csv": null,
+    "codex_table": null,
+    "codex_dapi": null,
+    "slide_dir": null,
+    "stain_mode": "native",
+    "um_per_px_level0": 0.2125,
+    "img_level": 1,
+    "seed": 7
+  },
+  "upstream": {
+    "evaluation": "c946839b35cd4e59",
+    "interpretation": "785e7488012c95c0",
+    "external_validation": "411419e453fbac7b",
+    "deployment": "ed9baa7f973eefbe"
+  },
+  "artefacts": [
+    "model_card.json",
+    "CONTRIBUTIONS.md",
+    "release_gates.csv",
+    "figures/cv_results.png",
+    "figures/reliability.png",
+    "qa_tier2.csv",
+    "qa_tier3.csv"
+  ],
+  "git_commit": "unknown",
+  "device": "cuda",
+  "python": "3.12.3",
+  "seconds": 8.0,
+  "seconds_compute": 8.0,
+  "seconds_load": null,
+  "recomputed": true,
+  "computed_at": "2026-11-05 11:04:14",
+  "finished": "2026-11-05 11:04:14"
+}

@@ -1,0 +1,7 @@
+program,n_genes,in_panel,missing
+wnt_camdr,18,15,"WNT10A, SFRP2, MIF"
+wnt_core,10,8,"WNT10A, SFRP2"
+adhesion_survival,8,7,MIF
+pc_stress_survival,6,5,DDIT4
+t_exhaustion,8,7,TNFAIP3
+cytotoxicity,17,12,"NKG7, GNLY, CTSW, DEFA3, DEFA4"

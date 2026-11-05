@@ -1,0 +1,28 @@
+{
+  "loader": "tiny",
+  "hub_id": null,
+  "pretrained": false,
+  "gated": false,
+  "commercial": true,
+  "licence": "n/a (test-only network)",
+  "input_px": 224,
+  "dim": 64,
+  "feature_map": "(B, 64, 8, 8)",
+  "source": "features/encoder._tiny_test_encoder",
+  "paper": "n/a",
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "name": "tiny_test",
+  "weight_hash": "2bd2b9273801",
+  "device": "cpu",
+  "grid_tokens": 64,
+  "grid_dim": 64
+}

@@ -1,0 +1,40 @@
+{
+  "component": "unified_model",
+  "hash": "69cf861fcad61d5d",
+  "config": {
+    "d_model": 128,
+    "n_layers": 2,
+    "n_heads": 2,
+    "head_dim": 64,
+    "dropout": 0.3,
+    "n_fourier": 32,
+    "fourier_scale": 6.0,
+    "slide_emb_dim": 16,
+    "uncertainty": "gaussian",
+    "temperature_scaling": true,
+    "lambda_comp": 0.5,
+    "lambda_smooth": 0.1,
+    "lambda_align": 0.0,
+    "knn_k": 6,
+    "grid": 5,
+    "hidden": 256,
+    "seed": 7
+  },
+  "upstream": {
+    "feature_extraction": "f1ab959dd91cf9df",
+    "program_inference": "f451b3b94c1ce74e",
+    "feature_selection": "7c7b74e22e94d1c7"
+  },
+  "artefacts": [
+    "model_spec.json"
+  ],
+  "git_commit": "unknown",
+  "device": "cuda",
+  "python": "3.12.3",
+  "seconds": 0.0,
+  "seconds_compute": 0.6,
+  "seconds_load": 0.0,
+  "recomputed": false,
+  "computed_at": "2026-11-05 00:49:23",
+  "finished": "2026-11-05 00:52:30"
+}

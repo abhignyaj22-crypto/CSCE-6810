@@ -1,0 +1,41 @@
+{
+  "component": "ingest",
+  "hash": "37511ae7cb4de816",
+  "config": {
+    "demo_mode": true,
+    "geo_accession": "GSE299193",
+    "sample_limit": null,
+    "exclude_title_regex": "relapse",
+    "min_panel_genes": 1000,
+    "platform": "xenium",
+    "img_level": 1,
+    "z_project": "max",
+    "stain_mode": "native",
+    "um_per_px_level0": 0.2125,
+    "min_transcripts": 60,
+    "min_genes": 50,
+    "max_cells_per_sample": 2000,
+    "nb_radius_um": 30.0,
+    "density_radii_px": [
+      25,
+      50,
+      100
+    ],
+    "seed": 7
+  },
+  "upstream": {},
+  "artefacts": [
+    "samples.json",
+    "adata_raw.h5ad",
+    "full_xy.npz"
+  ],
+  "git_commit": "unknown",
+  "device": "cpu",
+  "python": "3.12.3",
+  "seconds": 2.2,
+  "seconds_compute": 2.2,
+  "seconds_load": null,
+  "recomputed": true,
+  "computed_at": "2026-11-04 22:13:16",
+  "finished": "2026-11-04 22:13:16"
+}

@@ -1,0 +1,44 @@
+{
+  "component": "program_inference",
+  "hash": "4508b24e5b505654",
+  "config": {
+    "programs_n_extra": 2,
+    "programs_anchor_prior": 1.0,
+    "programs_l1_nonanchor": 0.05,
+    "programs_max_iter": 60,
+    "programs_fit_cells": 20000,
+    "include_anchor_only_targets": true,
+    "target_spaces": [
+      "cell",
+      "nb"
+    ],
+    "target_norm": "cohort",
+    "reliability_seed": 11,
+    "min_program_genes": 3,
+    "nb_radius_um": 30.0,
+    "seed": 7
+  },
+  "upstream": {
+    "preprocess": "73971218be8a8d7c"
+  },
+  "artefacts": [
+    "program_weights.csv",
+    "program_scores.npy",
+    "targets.json",
+    "Y.npy",
+    "lineage.csv",
+    "target_reliability.csv",
+    "reliability_summary.csv",
+    "panel_coverage.csv",
+    "expression_embedding.npy"
+  ],
+  "git_commit": "unknown",
+  "device": "cpu",
+  "python": "3.12.3",
+  "seconds": 1.3,
+  "seconds_compute": 1.3,
+  "seconds_load": null,
+  "recomputed": true,
+  "computed_at": "2026-11-04 22:13:23",
+  "finished": "2026-11-04 22:13:23"
+}

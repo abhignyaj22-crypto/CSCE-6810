@@ -1,0 +1,113 @@
+# mmprog v3 default: the full GSE299193 cohort (21 trephines), every variant.
+# Sections group the flat Config fields by component; `--set section.key=value` overrides any of them.
+run:
+  run_name: gse299193_v3
+  root: ./workspace
+  local_data: ./workspace/raw
+  seed: 7
+  demo_mode: false
+  phases: [1]
+ingest:
+  geo_accession: GSE299193
+  sample_limit: null
+  exclude_title_regex: relapse
+  min_panel_genes: 1000
+  platform: xenium
+  img_level: 1              # 0.425 um/px
+  z_project: max
+  stain_mode: native
+preprocess:
+  min_transcripts: 60
+  min_genes: 50
+  max_cells_per_sample: 30000
+  nb_radius_um: 30
+  density_radii_px: [25, 50, 100]
+programs:
+  programs_n_extra: 2
+  programs_anchor_prior: 1.0
+  programs_l1_nonanchor: 0.05
+  programs_max_iter: 200
+  programs_fit_cells: 100000
+  include_anchor_only_targets: true
+  target_spaces: [cell, nb]
+  target_norm: cohort
+  reliability_seed: 11
+features:
+  encoder: resnet50          # uni / virchow2 / hoptimus0 / phikon_v2 need a Hugging Face token and licence acceptance
+  commercial_use: false
+  patch_px: 64
+  grid: 7                    # ResNet-50 feature map is 7 x 7; larger grids are clamped with a printed note
+  emb_batch: 512
+  knn_k: 6
+  num_workers: 4
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 2
+  channels_last: true
+  compile_encoder: false
+selection:
+  selection_enabled: true
+  pca_dim: 128
+  use_morpho: true
+model:
+  d_model: 128
+  n_layers: 2
+  n_heads: 2
+  head_dim: 64
+  dropout: 0.3
+  n_fourier: 32
+  fourier_scale: 6.0
+  slide_emb_dim: 16
+  uncertainty: gaussian
+  temperature_scaling: true
+  lambda_comp: 0.5
+  lambda_smooth: 0.1
+  lambda_align: 0.0          # alignment off by default (DESIGN_V3 D31); the align variant uses lambda_align_on
+  lambda_align_on: 0.1
+training:
+  n_folds: 7
+  seeds: [7, 8, 9]
+  model_variants: [full, no_neighbours, no_grid, no_program_tokens, no_comp, no_smooth, align, shuffled, oracle, anchor_only_targets]
+  batch_cells: 2048
+  max_epochs: 40
+  patience: 6
+  lr: 0.001
+  weight_decay: 0.001
+  warmup_steps: 100
+  grad_clip: 1.0
+  amp_enabled: true
+  amp_dtype: bfloat16
+  tf32: true
+  compile_model: false
+  cuda_graphs: false
+evaluation:
+  n_boot: 200
+  min_cells_per_patient_metric: 30
+  coverage_levels: [0.5, 0.9]
+  conformal_alpha: 0.1
+  stage_test: permanova        # PERMANOVA + Jonckheere-Terpstra trend by stage; "manova" or "both" keeps the classical test
+  stage_n_perm: 999
+  manova_n_perm: 999
+  clinical_csv: null
+interpretation:
+  srb_enabled: true
+  srb_grid: 8
+  srb_lambdas: [0.0, 0.1, 0.5]
+  srb_radius_um: 5.0
+  srb_rounds: 120
+  srb_max_train_cells: 40000
+  attribution_n_cells: 20000
+  ig_steps: 32
+  backbone_threshold: 0.05
+  backbone_min_fold_fraction: 0.8
+  motifs_enabled: true
+validation:
+  validation_n_random_sets: 200          # expression-matched random gene sets for the program-specificity null
+  validation_perturbations: [gamma_0.8, gamma_1.25, blur_1.0, rot90, noise_0.02, scale_0.9]
+  validation_cohort_manifest: null       # JSON manifest of an independent cohort (Xenium or Visium HD) scored by the final model
+deployment:
+  slide_dir: null
+  codex_table: null
+  codex_dapi: null
+  codex_dapi_um_per_px: null
+  min_plasma_for_burden: 50

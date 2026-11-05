@@ -1,0 +1,46 @@
+{
+  "component": "feature_extraction",
+  "hash": "225c5dc516b309f8",
+  "config": {
+    "encoder": "tiny_test",
+    "encoder_token_env": "HF_TOKEN",
+    "commercial_use": false,
+    "patch_px": 64,
+    "grid": 8,
+    "emb_batch": 512,
+    "emb_dtype": "float16",
+    "density_radii_px": [
+      25,
+      50,
+      100
+    ],
+    "knn_k": 6,
+    "num_workers": 0,
+    "pin_memory": true,
+    "persistent_workers": false,
+    "prefetch_factor": 2,
+    "channels_last": true,
+    "compile_encoder": false,
+    "amp_enabled": false,
+    "seed": 7
+  },
+  "upstream": {
+    "preprocess": "73971218be8a8d7c"
+  },
+  "artefacts": [
+    "emb.f16.npy",
+    "grid.f16.npy",
+    "morpho.npy",
+    "graph.npz",
+    "encoder_card.json"
+  ],
+  "git_commit": "unknown",
+  "device": "cpu",
+  "python": "3.12.3",
+  "seconds": 11.7,
+  "seconds_compute": 11.7,
+  "seconds_load": null,
+  "recomputed": true,
+  "computed_at": "2026-11-04 22:13:35",
+  "finished": "2026-11-04 22:13:35"
+}
